@@ -14,7 +14,7 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
 .logo-img{width:100px;height:100px;object-fit:contain;flex-shrink:0;}
 .logo-text h1{font-size:1.15rem;font-weight:700;color:#fff;line-height:1.1;}
 .logo-text p{font-size:0.72rem;color:#a0ccf0;font-family:Arial,sans-serif;letter-spacing:0.05em;text-transform:uppercase;}
-.header-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#c0e0ff;padding:5px 13px;border-radius:20px;font-size:0.72rem;font-family:Arial,sans-serif;letter-spacing:0.04em;white-space:nowrap;}
+.header-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#c0e0ff;padding:5px 13px;border-radius:20px;font-size:0.72rem;font-family:Arial,sans-serif;white-space:nowrap;}
 .hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 60%,var(--primary-light) 100%);color:#fff;padding:42px 24px 34px;text-align:center;}
 .hero h2{font-size:1.9rem;font-weight:700;margin-bottom:8px;line-height:1.2;}
 .hero-div{width:54px;height:3px;background:rgba(255,255,255,0.45);margin:12px auto 14px;border-radius:2px;}
@@ -47,11 +47,7 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
 .tab-panel-header{background:var(--primary);color:#fff;padding:13px 18px;border-radius:var(--radius) var(--radius) 0 0;}
 .tab-panel-header h3{font-size:0.98rem;margin-bottom:2px;}
 .tab-panel-header p{font-size:0.75rem;color:#a0ccf0;font-family:Arial,sans-serif;}
-.tab-panel-body{background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow);}
-.condition-block{padding:10px 18px;}
-.condition-block:last-child{border-bottom:none;}
-.condition-label{font-family:Arial,sans-serif;font-size:0.78rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.04em;padding:8px 0 5px;border-top:1px solid var(--primary-pale);}
-.condition-block:first-child .condition-label{border-top:none;}
+.tab-panel-body{background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow);padding:14px 18px 18px;}
 .symptoms-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
 @media(max-width:560px){.symptoms-grid{grid-template-columns:1fr;}}
 .symptom-label{display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-family:Arial,sans-serif;font-size:0.81rem;color:var(--text-mid);padding:6px 9px;border-radius:6px;border:1.5px solid transparent;transition:all 0.15s;line-height:1.38;user-select:none;}
@@ -67,18 +63,14 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
 .btn-next:hover{background:var(--primary-mid);transform:translateY(-2px);}
 .btn-generate{background:var(--cta);color:#fff;border-color:var(--cta);box-shadow:0 4px 16px rgba(45,80,22,0.3);}
 .btn-generate:hover{background:var(--cta-hover);transform:translateY(-2px);}
-
-/* ===== RESULTS ===== */
 #results-section{display:none;}
 .results-header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);color:#fff;border-radius:var(--radius);padding:26px 22px 20px;text-align:center;margin-bottom:20px;}
 .rcu-badge-wrap{display:flex;justify-content:center;margin-bottom:12px;}
-.rcu-circle{background:#fff;border-radius:50%;padding:6px;width:80px;height:80px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.35),0 0 0 3px rgba(255,255,255,0.4);}
+.rcu-circle{background:#fff;border-radius:50%;padding:6px;width:80px;height:80px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.35);}
 .rcu-circle img{width:68px;height:68px;object-fit:contain;}
 .results-header h2{font-size:1.55rem;margin-bottom:5px;}
 .res-name{color:#b8d8f8;font-family:Arial,sans-serif;font-size:0.93rem;}
 .res-date{color:#90bce0;font-family:Arial,sans-serif;font-size:0.76rem;margin-top:3px;}
-
-/* ===== AI TERRAIN ANALYSIS ===== */
 .terrain-card{background:#fff;border:2px solid var(--primary-mid);border-radius:var(--radius);padding:22px 24px;margin-bottom:22px;box-shadow:0 6px 24px rgba(26,95,168,0.14);}
 .terrain-card-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;border-bottom:2px solid var(--primary-pale);padding-bottom:10px;}
 .terrain-icon{font-size:1.35rem;}
@@ -87,49 +79,31 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
 #terrain-analysis-text{font-size:0.96rem;color:var(--text-dark);line-height:1.82;font-style:italic;}
 #terrain-analysis-text p{margin-bottom:13px;}
 #terrain-analysis-text p:last-child{margin-bottom:0;}
-
-/* Loading state */
 .terrain-loading{display:flex;flex-direction:column;align-items:center;padding:28px 0;}
 .terrain-loading .pulse-ring{width:52px;height:52px;border-radius:50%;border:4px solid var(--primary-pale);border-top-color:var(--primary-mid);animation:spin 1s linear infinite;margin-bottom:14px;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .terrain-loading p{font-family:Arial,sans-serif;font-size:0.87rem;color:var(--text-light);text-align:center;}
-.loading-msg{transition:opacity 0.5s;}
-
-/* Top 5 */
 .section-heading{color:var(--primary);font-size:1.02rem;margin-bottom:13px;}
 .top5-card{background:#fff;border:1px solid var(--border);border-left:5px solid var(--cta);border-radius:var(--radius);padding:15px 18px;margin-bottom:11px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-.top5-card.rank1{border-left-color:#c0392b;}
-.top5-card.rank2{border-left-color:#d35400;}
-.top5-card.rank3{border-left-color:#d4ac0d;}
+.top5-card.rank1{border-left-color:#c0392b;}.top5-card.rank2{border-left-color:#d35400;}.top5-card.rank3{border-left-color:#d4ac0d;}
 .top5-left{flex:1;min-width:160px;}
 .top5-rank{font-family:Arial,sans-serif;font-size:0.72rem;font-weight:700;color:var(--cta);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;}
-.top5-card.rank1 .top5-rank{color:#c0392b;}
-.top5-card.rank2 .top5-rank{color:#d35400;}
-.top5-card.rank3 .top5-rank{color:#d4ac0d;}
+.top5-card.rank1 .top5-rank{color:#c0392b;}.top5-card.rank2 .top5-rank{color:#d35400;}.top5-card.rank3 .top5-rank{color:#d4ac0d;}
 .top5-name{font-size:0.97rem;font-weight:700;color:var(--text-dark);margin-bottom:7px;}
 .top5-track{background:var(--primary-pale);border-radius:6px;height:8px;overflow:hidden;}
 .top5-fill{height:100%;background:var(--cta);border-radius:6px;transition:width 1s ease;}
-.top5-card.rank1 .top5-fill{background:#c0392b;}
-.top5-card.rank2 .top5-fill{background:#d35400;}
-.top5-card.rank3 .top5-fill{background:#d4ac0d;}
+.top5-card.rank1 .top5-fill{background:#c0392b;}.top5-card.rank2 .top5-fill{background:#d35400;}.top5-card.rank3 .top5-fill{background:#d4ac0d;}
 .top5-pct{font-family:Arial,sans-serif;font-size:1.1rem;font-weight:700;color:var(--cta);min-width:42px;text-align:right;}
-.top5-card.rank1 .top5-pct{color:#c0392b;}
-.top5-card.rank2 .top5-pct{color:#d35400;}
-.top5-card.rank3 .top5-pct{color:#d4ac0d;}
-
-/* Program buttons */
+.top5-card.rank1 .top5-pct{color:#c0392b;}.top5-card.rank2 .top5-pct{color:#d35400;}.top5-card.rank3 .top5-pct{color:#d4ac0d;}
 .programs-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow);}
 .programs-card h3{color:var(--primary);font-size:1.02rem;margin-bottom:5px;}
 .programs-card .sub{font-family:Arial,sans-serif;font-size:0.86rem;color:var(--text-mid);margin-bottom:14px;line-height:1.55;}
 .program-btns{display:flex;flex-direction:column;gap:10px;}
-.btn-program{display:flex;align-items:center;justify-content:space-between;background:var(--cta);color:#fff;text-decoration:none;padding:15px 20px;border-radius:var(--radius);font-family:Arial,sans-serif;font-size:0.95rem;font-weight:700;transition:all 0.2s;box-shadow:0 4px 14px rgba(45,80,22,0.22);letter-spacing:0.02em;border:none;cursor:pointer;width:100%;}
-.btn-program:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,80,22,0.3);}
+.btn-program{display:flex;align-items:center;justify-content:space-between;background:var(--cta);color:#fff;text-decoration:none;padding:15px 20px;border-radius:var(--radius);font-family:Arial,sans-serif;font-size:0.95rem;font-weight:700;transition:all 0.2s;box-shadow:0 4px 14px rgba(45,80,22,0.22);border:none;cursor:pointer;width:100%;}
+.btn-program:hover{background:var(--cta-hover);transform:translateY(-2px);}
 .btn-program.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary);box-shadow:none;}
 .btn-program.secondary:hover{background:var(--primary-pale);}
-.btn-program .bp-left{display:flex;align-items:center;gap:10px;}
-.btn-program .bp-arrow{font-size:1.1rem;opacity:0.75;}
-
-/* All results */
+.bp-arrow{font-size:1.1rem;opacity:0.75;}
 .all-results-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow);}
 .all-results-card h3{color:var(--primary);font-size:1.02rem;margin-bottom:16px;border-bottom:2px solid var(--primary-pale);padding-bottom:7px;}
 .result-row{margin-bottom:11px;}
@@ -140,41 +114,33 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
 .result-pct{font-family:Arial,sans-serif;font-size:0.82rem;font-weight:700;}
 .result-track{background:var(--primary-pale);border-radius:5px;height:9px;overflow:hidden;}
 .result-fill{height:100%;border-radius:5px;transition:width 1.1s cubic-bezier(.4,0,.2,1);}
-
-/* Consult CTA */
 .consult-card{background:var(--primary);color:#fff;border-radius:var(--radius);padding:24px 22px;margin-bottom:20px;text-align:center;}
 .consult-card h3{font-size:1.12rem;margin-bottom:8px;color:#d0e8ff;}
 .consult-card p{font-family:Arial,sans-serif;font-size:0.88rem;color:#a8d0f0;line-height:1.65;margin-bottom:16px;max-width:540px;margin-left:auto;margin-right:auto;}
-.btn-consult{display:inline-block;background:var(--cta);color:#fff;text-decoration:none;padding:13px 32px;border-radius:28px;font-family:Arial,sans-serif;font-size:0.97rem;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,0.25);transition:all 0.2s;letter-spacing:0.02em;}
+.btn-consult{display:inline-block;background:var(--cta);color:#fff;text-decoration:none;padding:13px 32px;border-radius:28px;font-family:Arial,sans-serif;font-size:0.97rem;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,0.25);transition:all 0.2s;}
 .btn-consult:hover{background:var(--cta-hover);transform:translateY(-2px);}
 .disclaimer{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:13px 17px;font-family:Arial,sans-serif;font-size:0.75rem;color:var(--text-light);line-height:1.55;margin-bottom:13px;}
 .retake-btn{display:block;margin:0 auto 40px;background:transparent;color:var(--primary-mid);border:2px solid var(--primary-mid);padding:10px 26px;border-radius:22px;font-family:Arial,sans-serif;font-size:0.85rem;cursor:pointer;transition:all 0.18s;}
 .retake-btn:hover{background:var(--primary-pale);}
-.site-footer{background:var(--primary);color:#90bce0;text-align:center;padding:20px;font-family:Arial,sans-serif;font-size:0.75rem;letter-spacing:0.03em;}
+.site-footer{background:var(--primary);color:#90bce0;text-align:center;padding:20px;font-family:Arial,sans-serif;font-size:0.75rem;}
 @media(max-width:600px){.hero h2{font-size:1.4rem;}.header-inner{padding:11px 14px;}.logo-text h1{font-size:1rem;}.header-badge{display:none;}.tab-btn{padding:6px 9px;font-size:0.73rem;}.btn-nav{padding:10px 17px;font-size:0.83rem;}.top5-card{flex-direction:column;}.results-header h2{font-size:1.3rem;}}
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-area">
       <img src="https://aseaydc.github.io/root-cause-unlocked-quiz/1.png" alt="Root Health NC" class="logo-img" onerror="this.style.display='none'">
-      <div class="logo-text">
-        <h1>Root Cause Unlocked</h1>
-        <p>Root Health NC &bull; Functional Medicine</p>
-      </div>
+      <div class="logo-text"><h1>Root Cause Unlocked</h1><p>Root Health NC &bull; Functional Medicine</p></div>
     </div>
     <div class="header-badge">Symptom Assessment</div>
   </div>
 </header>
-
 <div class="hero">
   <h2>Root Cause Symptom Assessment</h2>
   <div class="hero-div"></div>
-  <p>Check every symptom you currently experience across 55 root cause conditions. Our AI-powered algorithm scores each area and generates a personalized terrain analysis — identifying your highest-priority healing targets.</p>
+  <p>Check every symptom you currently experience. Our AI-powered algorithm scores your responses across 56 root cause conditions and generates a personalized terrain analysis.</p>
 </div>
-
 <div class="main-wrap" id="quiz-section">
   <div class="patient-card">
     <h3>Patient Information</h3>
@@ -185,19 +151,11 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
       <div class="info-field"><label>Biological Sex</label>
         <select id="sex"><option value="">Select...</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select>
       </div>
-      <div class="info-field" style="grid-column:1/-1">
-        <label>Primary Health Concern (optional)</label>
-        <input type="text" id="concern" placeholder="e.g. chronic fatigue, digestive issues, brain fog...">
-      </div>
+      <div class="info-field" style="grid-column:1/-1"><label>Primary Health Concern (optional)</label><input type="text" id="concern" placeholder="e.g. chronic fatigue, digestive issues, brain fog..."></div>
     </div>
   </div>
-
-  <div class="quiz-intro">
-    <strong>Instructions:</strong> Work through each of the 6 category tabs and check every symptom you have experienced in the <strong>past 3 months</strong>. You do not need a formal diagnosis — check anything that applies. Click <strong>Next Section</strong> after each tab. Your personalized AI terrain analysis will generate after the final section.
-  </div>
-
+  <div class="quiz-intro"><strong>Instructions:</strong> Work through each of the 8 body system tabs and check every symptom you have experienced in the <strong>past 3 months</strong>. You do not need a diagnosis — simply check what applies. Click <strong>Next Section</strong> after each tab.</div>
   <div class="val-msg" id="val-msg"></div>
-
   <div class="progress-wrap">
     <div class="progress-top">
       <span class="progress-title" id="prog-title">Section 1 of 8 &mdash; Gut &amp; Digestive</span>
@@ -205,34 +163,29 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
     </div>
     <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:13%"></div></div>
   </div>
-
   <div class="tab-nav" id="tab-nav">
     <button class="tab-btn active" onclick="goToTab(0)">🌿 Gut &amp; Digestive</button>
-    <button class="tab-btn" onclick="goToTab(1)">🧠 Brain &amp; Nervous System</button>
-    <button class="tab-btn" onclick="goToTab(2)">🛡 Immune &amp; Autoimmune</button>
-    <button class="tab-btn" onclick="goToTab(3)">⚖ Hormonal &amp; Metabolic</button>
+    <button class="tab-btn" onclick="goToTab(1)">🧠 Brain &amp; Nervous</button>
+    <button class="tab-btn" onclick="goToTab(2)">🛡 Immune</button>
+    <button class="tab-btn" onclick="goToTab(3)">⚖ Hormonal</button>
     <button class="tab-btn" onclick="goToTab(4)">🌞 Skin &amp; Structural</button>
-    <button class="tab-btn" onclick="goToTab(5)">⚗ Toxicity &amp; Infections</button>
+    <button class="tab-btn" onclick="goToTab(5)">⚗ Toxicity</button>
     <button class="tab-btn" onclick="goToTab(6)">🦴 Musculoskeletal</button>
-    <button class="tab-btn" onclick="goToTab(7)">🫀 Organ Support</button>
+    <button class="tab-btn" onclick="goToTab(7)">🫀 Systemic</button>
   </div>
-
-  <div class="tab-panel active" id="tab-0"><div class="tab-panel-header"><h3>🌿 Gut &amp; Digestive Health</h3><p>13 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-0"></div></div>
-  <div class="tab-panel" id="tab-1"><div class="tab-panel-header"><h3>🧠 Brain &amp; Nervous System</h3><p>10 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-1"></div></div>
-  <div class="tab-panel" id="tab-2"><div class="tab-panel-header"><h3>🛡 Immune &amp; Autoimmune</h3><p>7 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-2"></div></div>
-  <div class="tab-panel" id="tab-3"><div class="tab-panel-header"><h3>⚖ Hormonal &amp; Metabolic</h3><p>9 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-3"></div></div>
-  <div class="tab-panel" id="tab-4"><div class="tab-panel-header"><h3>🌞 Skin &amp; Structural</h3><p>5 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-4"></div></div>
-  <div class="tab-panel" id="tab-5"><div class="tab-panel-header"><h3>⚗ Toxicity &amp; Infections</h3><p>4 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-5"></div></div>
-  <div class="tab-panel" id="tab-6"><div class="tab-panel-header"><h3>🦴 Musculoskeletal</h3><p>6 conditions — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-6"></div></div>
-  <div class="tab-panel" id="tab-7"><div class="tab-panel-header"><h3>🫀 Organ Support</h3><p>1 condition — check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-7"></div></div>
-
+  <div class="tab-panel active" id="tab-0"><div class="tab-panel-header"><h3>🌿 Gut &amp; Digestive</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-0"></div></div>
+  <div class="tab-panel" id="tab-1"><div class="tab-panel-header"><h3>🧠 Brain &amp; Nervous System</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-1"></div></div>
+  <div class="tab-panel" id="tab-2"><div class="tab-panel-header"><h3>🛡 Immune &amp; Autoimmune</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-2"></div></div>
+  <div class="tab-panel" id="tab-3"><div class="tab-panel-header"><h3>⚖ Hormonal &amp; Metabolic</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-3"></div></div>
+  <div class="tab-panel" id="tab-4"><div class="tab-panel-header"><h3>🌞 Skin &amp; Structural</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-4"></div></div>
+  <div class="tab-panel" id="tab-5"><div class="tab-panel-header"><h3>⚗ Toxicity &amp; Infections</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-5"></div></div>
+  <div class="tab-panel" id="tab-6"><div class="tab-panel-header"><h3>🦴 Musculoskeletal</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-6"></div></div>
+  <div class="tab-panel" id="tab-7"><div class="tab-panel-header"><h3>🫀 Energy &amp; Systemic</h3><p>Check every symptom that applies to you</p></div><div class="tab-panel-body" id="body-7"></div></div>
   <div class="tab-nav-btns">
     <button class="btn-nav btn-prev" id="btn-prev" onclick="prevTab()" style="visibility:hidden">&#8592; Previous</button>
     <button class="btn-nav btn-next" id="btn-next" onclick="nextTab()">Next Section &#8594;</button>
   </div>
 </div>
-
-<!-- RESULTS SECTION -->
 <div class="main-wrap" id="results-section">
   <div class="results-header">
     <div class="rcu-badge-wrap"><div class="rcu-circle"><img src="https://aseaydc.github.io/root-cause-unlocked-quiz/1.png" alt="Root Health NC"></div></div>
@@ -240,8 +193,6 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
     <div class="res-name" id="res-name"></div>
     <div class="res-date" id="res-date"></div>
   </div>
-
-  <!-- AI TERRAIN ANALYSIS -->
   <div class="terrain-card">
     <div class="terrain-card-header">
       <span class="terrain-icon">🔬</span>
@@ -250,427 +201,547 @@ body{font-family:'Georgia','Times New Roman',serif;background:var(--warm-white);
         <div class="terrain-subtitle">Dr. Adam Seay, DC &bull; 20+ years clinical practice &bull; Root Health NC, Garner, NC &bull; Functional Medicine &amp; Chiropractic</div>
       </div>
     </div>
-    <div id="terrain-analysis-text">
-      <div class="terrain-loading">
-        <div class="pulse-ring"></div>
-        <p id="loading-msg-text">Analyzing your terrain pattern…</p>
-      </div>
-    </div>
+    <div id="terrain-analysis-text"><div class="terrain-loading"><div class="pulse-ring"></div><p id="loading-msg-text">Analyzing your terrain pattern…</p></div></div>
   </div>
-
-  <!-- TOP 5 -->
-  <div style="margin-bottom:20px;">
-    <h3 class="section-heading">Your Top Priority Areas</h3>
-    <div id="top5-cards"></div>
-  </div>
-
-  <!-- PROGRAM CTAs -->
+  <div style="margin-bottom:20px;"><h3 class="section-heading">Your Top Priority Areas</h3><div id="top5-cards"></div></div>
   <div class="programs-card">
     <h3>Your Recommended Programs</h3>
-    <p class="sub">Based on your terrain analysis, these targeted programs address your highest-priority root causes. Each includes drainage protocols, targeted supplementation, lab guidance, and lifestyle modifications.</p>
+    <p class="sub">Based on your terrain analysis, these targeted programs address your highest-priority root causes — each with drainage protocols, targeted supplementation, lab guidance, and lifestyle modifications.</p>
     <div class="program-btns" id="program-btns"></div>
   </div>
-
-  <!-- CONSULT CTA -->
   <div class="consult-card">
     <h3>Ready to Build Your Personalized Protocol?</h3>
     <p>Your terrain analysis reveals a pattern that deserves clinical precision — not a generic protocol. Schedule a Root Health NC functional medicine consultation to get lab-confirmed answers, a drainage-first treatment sequence, and a supplement protocol designed specifically for your terrain.</p>
     <a href="https://roothealthnc.com/schedule" class="btn-consult" target="_blank">Schedule Your Consultation &#8594;</a>
   </div>
-
-  <!-- FULL RANKING -->
-  <div class="all-results-card">
-    <h3>Complete Condition Scoring — All 55 Areas</h3>
-    <div id="all-bars"></div>
-  </div>
-
-  <div class="disclaimer">
-    &#9432; This assessment is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Results reflect symptom patterns, not confirmed diagnoses. Please consult a qualified healthcare provider before making any health decisions.
-  </div>
+  <div class="all-results-card"><h3>Complete Condition Scoring — All 55 Areas</h3><div id="all-bars"></div></div>
+  <div class="disclaimer">&#9432; This assessment is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Results reflect symptom patterns, not confirmed diagnoses.</div>
   <button class="retake-btn" onclick="retakeQuiz()">&#8634; Retake Assessment</button>
 </div>
-
 <footer class="site-footer">
   &copy; 2025 Root Cause Unlocked &bull; Root Health NC &bull; Functional Medicine &bull; All Rights Reserved<br>
   <span style="opacity:0.55">This tool is for educational purposes only and does not constitute medical advice.</span>
 </footer>
-
-<!-- EMAIL GATE MODAL -->
 <div id="email-gate" style="display:none;position:fixed;inset:0;background:rgba(13,42,69,0.72);z-index:300;align-items:center;justify-content:center;padding:20px;">
   <div style="background:#fff;border-radius:14px;padding:38px 32px;max-width:430px;width:100%;box-shadow:0 10px 50px rgba(0,0,0,0.35);">
-    <h3 style="color:var(--primary);font-size:1.22rem;margin-bottom:8px;font-family:Georgia,serif;">Almost There — Unlock Your Results</h3>
-    <p style="color:var(--text-mid);font-family:Arial,sans-serif;font-size:0.88rem;margin-bottom:22px;line-height:1.65;">Your personalized terrain analysis is ready. Enter your details to receive your results and a follow-up guide from Dr. Adam Seay.</p>
+    <h3 style="color:#1A5FA8;font-size:1.22rem;margin-bottom:8px;font-family:Georgia,serif;">Almost There — Unlock Your Results</h3>
+    <p style="color:#2A4A6A;font-family:Arial,sans-serif;font-size:0.88rem;margin-bottom:22px;line-height:1.65;">Your personalized terrain analysis is ready. Enter your details to receive your results and a follow-up guide from Dr. Adam Seay.</p>
     <div style="display:flex;flex-direction:column;gap:14px;">
-      <div><label style="display:block;font-family:Arial,sans-serif;font-size:0.81rem;color:var(--text-mid);margin-bottom:4px;font-weight:600;">First Name *</label><input id="gate-fname" type="text" placeholder="Your first name" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:7px;font-family:Arial,sans-serif;font-size:0.88rem;color:var(--text-dark);outline:none;"></div>
-      <div><label style="display:block;font-family:Arial,sans-serif;font-size:0.81rem;color:var(--text-mid);margin-bottom:4px;font-weight:600;">Email Address *</label><input id="gate-email" type="email" placeholder="you@example.com" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:7px;font-family:Arial,sans-serif;font-size:0.88rem;color:var(--text-dark);outline:none;"></div>
-      <div id="gate-error" style="color:#c0392b;font-family:Arial,sans-serif;font-size:0.82rem;display:none;padding:2px 0;"></div>
-      <button onclick="submitEmailGate()" style="background:var(--cta);color:#fff;border:none;border-radius:24px;padding:13px 28px;font-family:Arial,sans-serif;font-size:0.96rem;font-weight:700;cursor:pointer;margin-top:2px;letter-spacing:0.02em;transition:background 0.18s;" onmouseover="this.style.background='#3d6b1f'" onmouseout="this.style.background='#2D5016'">Unlock My Results &#8594;</button>
+      <div><label style="display:block;font-family:Arial,sans-serif;font-size:0.81rem;color:#2A4A6A;margin-bottom:4px;font-weight:600;">First Name *</label><input id="gate-fname" type="text" placeholder="Your first name" style="width:100%;padding:10px 13px;border:1.5px solid #B0CDE8;border-radius:7px;font-family:Arial,sans-serif;font-size:0.88rem;outline:none;"></div>
+      <div><label style="display:block;font-family:Arial,sans-serif;font-size:0.81rem;color:#2A4A6A;margin-bottom:4px;font-weight:600;">Email Address *</label><input id="gate-email" type="email" placeholder="you@example.com" style="width:100%;padding:10px 13px;border:1.5px solid #B0CDE8;border-radius:7px;font-family:Arial,sans-serif;font-size:0.88rem;outline:none;"></div>
+      <div id="gate-error" style="color:#c0392b;font-family:Arial,sans-serif;font-size:0.82rem;display:none;"></div>
+      <button onclick="submitEmailGate()" style="background:#2D5016;color:#fff;border:none;border-radius:24px;padding:13px 28px;font-family:Arial,sans-serif;font-size:0.96rem;font-weight:700;cursor:pointer;">Unlock My Results &#8594;</button>
     </div>
   </div>
 </div>
-
 <script>
 // ============================================================
-// CONDITIONS DATA (55 conditions across 8 tabs)
+// SYMPTOM MASTER LIST — each symptom appears ONCE.
+// sf:'f' = female only | sf:'m' = male only | no sf = all
+// Symptoms score silently across all conditions that map them.
 // ============================================================
-const CONDITIONS = [
-  // TAB 0: GUT & DIGESTIVE
-  { id:'gerd', tab:0, name:'Reflux / GERD', url:'https://rootcauseunlocked.com/reflux-gerd', symptoms:['Heartburn (burning in chest or throat)','Regurgitation of food or acid','Chest pain or pressure','Chronic cough not explained by illness','Hoarseness or voice changes','Difficulty swallowing','Frequent throat clearing','Symptoms worsen when lying down or after eating'] },
-  { id:'ibs', tab:0, name:'IBS (Irritable Bowel Syndrome)', url:'https://rootcauseunlocked.com/ibs', symptoms:['Abdominal pain relieved by bowel movement','Alternating diarrhea and constipation','Urgent need to use the bathroom','Bloating or abdominal distension','Mucus in stool','Symptoms triggered or worsened by stress','Symptoms triggered by specific foods','Feeling of incomplete evacuation'] },
-  { id:'crohns', tab:0, name:"Crohn's Disease", url:'https://rootcauseunlocked.com/crohns-disease', symptoms:['Abdominal cramping or pain','Chronic or recurring diarrhea','Blood in stool','Unintended weight loss','Persistent fatigue','Reduced appetite or early fullness','Perianal pain or drainage','Fever during digestive flares'] },
-  { id:'uc', tab:0, name:'Ulcerative Colitis', url:'https://rootcauseunlocked.com/ulcerative-colitis', symptoms:['Bloody diarrhea','Abdominal cramping','Urgent bowel movements','Fatigue and low energy','Unintended weight loss','Failure to thrive or poor appetite','Joint pain accompanying GI symptoms','Eye inflammation or redness'] },
-  { id:'nafld', tab:0, name:'NAFLD (Non-Alcoholic Fatty Liver)', url:'https://rootcauseunlocked.com/nafld', symptoms:['Right upper abdominal discomfort or fullness','Persistent fatigue','Unexplained weight gain','Poor digestion of fatty foods or nausea after eating them','Elevated liver enzymes on lab work','Bloating after meals','Brain fog or mental cloudiness','Signs of insulin resistance (belly fat, sugar cravings)'] },
-  { id:'leakygut', tab:0, name:'Leaky Gut Syndrome', url:'https://rootcauseunlocked.com/leaky-gut', symptoms:['Food sensitivities or intolerances (multiple foods)','Bloating and gas after meals','Chronic digestive discomfort','Persistent fatigue or low energy','Brain fog or difficulty concentrating','Skin issues (rashes, eczema, or acne)','Joint pain or inflammation','Frequent colds or weakened immune function'] },
-  { id:'sibo', tab:0, name:'SIBO (Small Intestinal Bacterial Overgrowth)', url:'https://rootcauseunlocked.com/sibo', symptoms:['Bloating that worsens throughout the day','Excessive gas or belching','Abdominal pain or cramping','Diarrhea, constipation, or alternating bowel habits','Symptoms improve temporarily with antibiotics','Brain fog','Nutritional deficiencies despite adequate diet','Symptoms worsen after eating carbohydrates or fiber'] },
-  { id:'dysbiosis', tab:0, name:'Gut Dysbiosis', url:'https://rootcauseunlocked.com/dysbiosis', symptoms:['Bloating or excessive gas','Irregular or unpredictable bowel movements','Fatigue and low energy','Frequent infections or lowered immunity','Intense sugar or carbohydrate cravings','Skin problems or recurring rashes','Brain fog or poor concentration','Mood changes, anxiety, or irritability'] },
-  { id:'gastritis', tab:0, name:'Gastritis', url:'https://rootcauseunlocked.com/gastritis', symptoms:['Burning or gnawing stomach pain','Nausea or vomiting','Feeling full quickly after small amounts of food','Loss of appetite','Indigestion or frequent belching','Stomach pain that worsens or improves with eating','Bloating in upper abdomen'] },
-  { id:'hpylori', tab:0, name:'H. pylori Infection', url:'https://rootcauseunlocked.com/h-pylori', symptoms:['Burning stomach pain especially when stomach is empty','Nausea','Frequent burping','Bloating','Unintentional weight loss','Loss of appetite','Vomiting','Dark or tarry stools'] },
-  { id:'diverticulitis', tab:0, name:'Diverticulitis', url:'https://rootcauseunlocked.com/diverticulitis', symptoms:['Pain in lower left abdomen','Fever or chills during flares','Nausea or vomiting','Changes in bowel habits','Bloating or gas','Tenderness in lower left abdomen','Constipation more common than diarrhea'] },
-  { id:'parasitic', tab:0, name:'Parasitic Infection', url:'https://rootcauseunlocked.com/parasitic-infection', symptoms:['Abdominal pain or cramping','Diarrhea or loose stools','Nausea or vomiting','Weight loss despite normal eating','Fatigue and weakness','Bloating and gas','Itching around anus especially at night','Brain fog or cognitive changes'] },
-  { id:'gallbladder', tab:0, name:'Gallbladder Dysfunction', url:'https://rootcauseunlocked.com/gallbladder', symptoms:['Pain in upper right abdomen or right shoulder blade','Pain or nausea after eating fatty foods','Nausea or vomiting after meals','Bloating or indigestion after meals','Light-colored or pale stools','Intolerance to fatty or greasy foods','Nausea without obvious cause','Dark urine'] },
-  // TAB 1: BRAIN & NERVOUS SYSTEM
-  { id:'adhd', tab:1, name:'ADHD', url:'https://rootcauseunlocked.com/adhd', symptoms:['Difficulty focusing or sustaining attention','Impulsivity or acting without thinking','Chronic disorganization','Frequent forgetfulness in daily tasks','Restlessness or inability to sit still','Emotional dysregulation or mood swings','Poor or disrupted sleep','Easily overwhelmed by tasks or environments'] },
-  { id:'brain', tab:1, name:'Brain Dysfunction / Cognitive Decline', url:'https://rootcauseunlocked.com/brain-dysfunction', symptoms:['Persistent brain fog','Poor short-term memory','Difficulty concentrating','Word-finding problems or tip-of-tongue episodes','Mental fatigue after cognitive tasks','Slow mental processing speed','Mood instability linked to mental exhaustion','Frequent headaches'] },
-  { id:'vertigo', tab:1, name:'Vertigo / Vestibular Dysfunction', url:'https://rootcauseunlocked.com/vertigo', symptoms:['Spinning sensation (room or self moving)','Dizziness or lightheadedness','Balance problems or unsteadiness','Nausea triggered by movement','Ear fullness or pressure','Tinnitus (ringing in ears)','Symptoms triggered by head position changes','Falls or near-falls'] },
-  { id:'ms', tab:1, name:'Multiple Sclerosis', url:'https://rootcauseunlocked.com/multiple-sclerosis', symptoms:['Numbness or tingling in limbs or face','Muscle weakness in arms or legs','Vision problems (blurred, double, or loss)','Balance and coordination difficulties','Persistent or severe fatigue','Bladder or bowel dysfunction','Cognitive difficulties or memory problems','Symptoms worsen with heat or illness'] },
-  { id:'migraine', tab:1, name:'Migraines / Chronic Headaches', url:'https://rootcauseunlocked.com/migraines', symptoms:['Recurring or frequent headaches','Throbbing or pulsating head pain','Sensitivity to light or sound during headache','Nausea or vomiting with headache','Visual aura before or during headache','Hormonal triggers (e.g. menstrual cycle)','Food-triggered headaches (wine, chocolate, aged cheese)','Weather or barometric pressure triggers'] },
-  { id:'insomnia', tab:1, name:'Insomnia / Sleep Dysfunction', url:'https://rootcauseunlocked.com/insomnia', symptoms:['Difficulty falling asleep at night','Difficulty staying asleep or frequent waking','Waking up feeling unrefreshed','Racing or busy mind preventing sleep','Reliance on sleep aids (OTC or prescription)','Daytime fatigue or dysfunction from poor sleep','Mood affected by poor sleep','Chronic pattern lasting 3 or more months'] },
-  { id:'anxdep', tab:1, name:'Anxiety / Depression', url:'https://rootcauseunlocked.com/anxiety-depression', symptoms:['Persistent worry or anxious thoughts','Persistent low mood or sadness','Loss of interest in previously enjoyed activities','Fatigue or low energy most days','Sleep changes (too much or too little)','Appetite changes (too much or too little)','Difficulty concentrating or making decisions','Physical symptoms (headaches, GI upset) without clear cause'] },
-  { id:'neuropathy', tab:1, name:'Neuropathy', url:'https://rootcauseunlocked.com/neuropathy', symptoms:['Numbness or reduced sensation in feet or hands','Burning or tingling in extremities','Sharp or shooting pain in limbs','Weakness in hands or feet','Sensitivity to touch (even light touch is painful)','Loss of coordination or balance problems','Symptoms worse at night','Muscle cramps or twitching'] },
-  { id:'alzheimers', tab:1, name:"Alzheimer's / Dementia", url:'https://rootcauseunlocked.com/alzheimers-dementia', symptoms:['Progressive memory loss affecting daily life','Difficulty completing familiar tasks','Confusion with time or place','Problems with language or finding words','Poor judgment or decision-making','Withdrawal from social activities','Personality or mood changes','Getting lost in familiar places'] },
-  { id:'parkinsons', tab:1, name:"Parkinson's Disease", url:'https://rootcauseunlocked.com/parkinsons-disease', symptoms:['Tremor or shaking at rest','Muscle stiffness or rigidity','Slowed movement (taking longer to do things)','Balance problems or falls','Small shuffling steps when walking','Reduced facial expression','Voice changes (softer or monotone)','Sleep disturbances or REM sleep behavior disorder'] },
-  // TAB 2: IMMUNE & AUTOIMMUNE
-  { id:'autoimmune', tab:2, name:'Autoimmune Disease (General)', url:'https://rootcauseunlocked.com/autoimmune-disease', symptoms:['Unexplained persistent fatigue','Joint pain or swelling','Recurring rashes or unexplained skin changes','Dry eyes or dry mouth','Brain fog or cognitive difficulties','Persistent low-grade fever','Multiple diagnoses that do not fully resolve','Family history of autoimmune disease'] },
-  { id:'ebv', tab:2, name:'EBV / Epstein-Barr Reactivation', url:'https://rootcauseunlocked.com/epstein-barr', symptoms:['Chronic or debilitating fatigue','Swollen or tender lymph nodes','Recurring sore throat','Persistent low-grade fever','Muscle weakness or heaviness','Brain fog or cognitive impairment','Tenderness in spleen or liver area','Symptoms flare with stress or illness'] },
-  { id:'mcas', tab:2, name:'Mast Cell Activation Syndrome (MCAS)', url:'https://rootcauseunlocked.com/mcas', symptoms:['Flushing or skin redness without obvious cause','Hives or itching without visible rash','Anaphylaxis-like reactions (throat tightness, severe reactions)','GI cramping or diarrhea that comes and goes unpredictably','Brain fog following reactions','Multiple food and chemical triggers','Symptoms worsen unpredictably or inconsistently','Fatigue or exhaustion following reactions'] },
-  { id:'longcovid', tab:2, name:'Long COVID', url:'https://rootcauseunlocked.com/long-covid', symptoms:['Fatigue after minimal physical or mental exertion','Brain fog or cognitive impairment','Shortness of breath','Post-exertional malaise (crash after activity)','Heart palpitations','Disrupted or unrefreshing sleep','Anxiety or depression onset after COVID infection','Symptoms persisting 3+ months after COVID-19 infection'] },
-  { id:'lyme', tab:2, name:'Lyme Disease / Tick-Borne Illness', url:'https://rootcauseunlocked.com/lyme-disease', symptoms:['Migratory joint pain (moves from joint to joint)','Fatigue unrelieved by rest','Brain fog or cognitive difficulties','Widespread muscle aches','Nerve pain, numbness, or tingling','Heart palpitations or irregular heartbeat','Flu-like symptoms that come and go','Sleep disturbance or non-restorative sleep'] },
-  { id:'allergies', tab:2, name:'Allergies / Histamine Intolerance', url:'https://rootcauseunlocked.com/allergies-histamine', symptoms:['Runny nose or nasal congestion without illness','Sneezing or itchy, watery eyes','Hives or skin flushing','Headaches after wine, aged cheese, or fermented foods','Digestive upset after high-histamine foods','Fatigue after eating trigger foods','Asthma or wheezing symptoms','Seasonal allergy symptoms'] },
-  { id:'eds', tab:2, name:'Ehlers-Danlos Syndrome (EDS)', url:'https://rootcauseunlocked.com/ehlers-danlos', symptoms:['Joint hypermobility (joints bend further than normal)','Frequent joint dislocations or subluxations','Chronic widespread pain','Skin that bruises or tears easily','Persistent fatigue','Digestive dysfunction (bloating, nausea, constipation)','Anxiety or heightened nervous system reactivity','POTS or dysautonomia symptoms'] },
-  // TAB 3: HORMONAL & METABOLIC
-  { id:'adrenal', tab:3, name:'Adrenal Dysfunction / HPA Axis', url:'https://rootcauseunlocked.com/adrenal-dysfunction', symptoms:['Fatigue worst in the morning','Energy crash between 3 and 5pm','Salt or salty food cravings','Dizziness or lightheadedness upon standing','Difficulty handling or recovering from stress','Low blood pressure readings','Poor or unrefreshing sleep','Heavy reliance on caffeine to function'] },
-  { id:'pcos', tab:3, name:'PCOS (Polycystic Ovary Syndrome)', url:'https://rootcauseunlocked.com/pcos', symptoms:['Irregular or absent menstrual periods','Excess facial or body hair (hirsutism)','Persistent acne especially on jawline or chin','Weight gain concentrated around the midsection','Thinning hair or hair loss on scalp','Difficulty losing weight despite effort','Mood swings or emotional instability','Blood sugar instability or insulin resistance signs'] },
-  { id:'cholesterol', tab:3, name:'High Cholesterol / Dyslipidemia', url:'https://rootcauseunlocked.com/high-cholesterol', symptoms:['Family history of heart disease or stroke','Persistent fatigue or low energy','Xanthomas (fatty deposits under skin or on tendons)','History of poor diet or high processed food intake','Progressive or unexplained weight gain','Brain fog or cognitive sluggishness','Diagnosed with high cholesterol on lab work','History of metabolic syndrome or pre-diabetes'] },
-  { id:'htn', tab:3, name:'Hypertension (High Blood Pressure)', url:'https://rootcauseunlocked.com/hypertension', symptoms:['High blood pressure readings (above 130/80 mmHg)','Headaches especially in the morning or back of head','Shortness of breath with light exertion','Chest tightness or pressure','Dizziness or lightheadedness','Nosebleeds without injury','Family history of hypertension or cardiovascular disease','Fatigue with physical exertion'] },
-  { id:'pots', tab:3, name:'POTS (Postural Orthostatic Tachycardia)', url:'https://rootcauseunlocked.com/pots', symptoms:['Dizziness or lightheadedness upon standing','Rapid heart rate when standing upright','Persistent fatigue','Brain fog','Fainting or near-fainting episodes','Exercise intolerance','Nausea','Heart palpitations'] },
-  { id:'hashimotos', tab:3, name:"Hashimoto's Thyroiditis", url:'https://rootcauseunlocked.com/hashimotos-thyroiditis', symptoms:['Persistent fatigue and sluggishness','Weight gain despite controlled diet','Cold sensitivity or always feeling cold','Brain fog or poor memory','Hair loss or thinning hair','Constipation','Depression or persistently low mood','Enlarged thyroid or throat discomfort'] },
-  { id:'lowtestosterone', tab:3, name:'Low Testosterone (Men)', url:'https://rootcauseunlocked.com/low-testosterone', symptoms:['Reduced sex drive or libido','Erectile dysfunction','Persistent fatigue or lack of energy','Decreased muscle mass or strength','Increased body fat especially in belly','Mood changes, depression, or irritability','Difficulty concentrating or brain fog','Reduced bone density or aching joints'] },
-  { id:'diabetes', tab:3, name:'Type 2 Diabetes', url:'https://rootcauseunlocked.com/type-2-diabetes', symptoms:['Increased thirst or frequent urination','Persistent fatigue or lack of energy','Blurred vision','Slow-healing cuts or frequent infections','Tingling or numbness in feet or hands','Unexplained weight changes','Increased hunger even after eating','Dark patches of skin (acanthosis nigricans)'] },
-  { id:'heartdisease', tab:3, name:'Heart Disease', url:'https://rootcauseunlocked.com/heart-disease', symptoms:['Chest pain, tightness, or pressure','Shortness of breath with exertion','Fatigue with minimal physical activity','Rapid or irregular heartbeat','Dizziness or lightheadedness','Swelling in legs, ankles, or feet','Family history of heart disease','High blood pressure or cholesterol history'] },
-  // TAB 4: SKIN & STRUCTURAL
-  { id:'psoriasis', tab:4, name:'Psoriasis', url:'https://rootcauseunlocked.com/psoriasis', symptoms:['Raised red scaly patches on skin','Persistent itching','Skin cracking or bleeding at affected areas','Nail changes (pitting, ridging, or discoloration)','Joint pain accompanying skin flares','Stress-triggered skin flares','Family history of psoriasis','History of strep or other infections triggering flares'] },
-  { id:'eczema', tab:4, name:'Eczema / Atopic Dermatitis', url:'https://rootcauseunlocked.com/eczema', symptoms:['Dry and intensely itchy skin','Recurring skin rashes especially in skin creases','Weeping or crusting of skin lesions','Worsens with stress','Food-triggered skin flares','Personal or family history of asthma or hay fever','Recurring skin infections','Sleep disruption due to nighttime itching'] },
-  { id:'psa', tab:4, name:'Psoriatic Arthritis / Ankylosing Spondylitis', url:'https://rootcauseunlocked.com/psoriatic-arthritis', symptoms:['Joint pain accompanied by skin changes','Morning spinal stiffness lasting over 30 minutes','Sacroiliac or lower back pain','Persistent fatigue','Enthesitis (pain at tendon or ligament insertion points)','Eye inflammation or redness (uveitis)','Symptoms improve with movement and worsen with rest','Family history of psoriasis or inflammatory arthritis'] },
-  { id:'arthritis', tab:4, name:'Inflammatory Arthritis', url:'https://rootcauseunlocked.com/inflammatory-arthritis', symptoms:['Joint pain or tenderness','Morning stiffness lasting over 30 minutes','Joint swelling','Reduced range of motion in affected joints','Joint warmth or redness','Persistent fatigue','Symptoms worse with inactivity or rest','Multiple joints affected simultaneously'] },
-  { id:'mold', tab:4, name:'Mold Toxicity / Biotoxin Illness', url:'https://rootcauseunlocked.com/mold-toxicity', symptoms:['Fatigue, weakness, or post-exertional malaise','Brain fog or cognitive difficulties','Unusual sensitivity to light or sounds','Joint pain or muscle cramping','Shortness of breath or air hunger','Increased urination or frequent thirst','Numbness or tingling','Mood changes or unusual anxiety'] },
-  // TAB 5: TOXICITY & INFECTIONS
-  { id:'heavymetals', tab:5, name:'Heavy Metal Toxicity', url:'https://rootcauseunlocked.com/heavy-metal-toxicity', symptoms:['Brain fog or cognitive impairment','Memory problems or poor recall','Persistent fatigue','Numbness or tingling in extremities','Muscle weakness','Recurring headaches','Mood changes or emotional instability','History of amalgam fillings or occupational chemical/metal exposure'] },
-  { id:'mcs', tab:5, name:'Multiple Chemical Sensitivity', url:'https://rootcauseunlocked.com/multiple-chemical-sensitivity', symptoms:['Reactions to perfumes, cleaning products, or chemicals','Fatigue after chemical or fragrance exposure','Headaches in public spaces or newly built or renovated buildings','Brain fog following chemical exposure','Nausea from scents or strong smells','Worsening symptoms in new buildings (off-gassing)','Skin reactions to household or personal care products','Widespread sensitivity that has worsened over time'] },
-  { id:'oxalate', tab:5, name:'Oxalate Toxicity', url:'https://rootcauseunlocked.com/oxalate-toxicity', symptoms:['Burning with urination without infection','History of kidney stones','Joint pain or gritty deposits in joints','Vulvar pain or vulvodynia','History of gut dysbiosis or leaky gut','Persistent fatigue','Brain fog or cognitive cloudiness','High-oxalate diet history (spinach, almonds, beets, dark chocolate)'] },
-  { id:'candida', tab:5, name:'Candida Overgrowth', url:'https://rootcauseunlocked.com/candida', symptoms:['Intense sugar or carbohydrate cravings','Chronic fatigue','Brain fog or cognitive difficulties','Recurring yeast infections (vaginal or oral thrush)','Fungal nail infections','Bloating and gas','Recurring skin rashes or persistent itchy skin','Mood swings or irritability'] },
-  // TAB 6: MUSCULOSKELETAL
-  { id:'rheumatoid', tab:6, name:'Rheumatoid Arthritis', url:'https://rootcauseunlocked.com/rheumatoid-arthritis', symptoms:['Symmetric joint pain (both sides of body affected)','Morning stiffness lasting over an hour','Joint swelling and warmth','Persistent fatigue','Fever or flu-like symptoms during flares','Loss of grip strength','Multiple joints affected (hands, wrists, feet)','Joint deformity or changes over time'] },
-  { id:'osteoarthritis', tab:6, name:'Osteoarthritis', url:'https://rootcauseunlocked.com/osteoarthritis', symptoms:['Joint pain that worsens with activity','Stiffness after rest that improves with movement','Grinding or bone-on-bone sensation in joints','Reduced range of motion','Joint swelling or tenderness','Worst in weight-bearing joints (knees, hips)','Pain improves with rest','Bony enlargements around affected joints'] },
-  { id:'osteoporosis', tab:6, name:'Osteoporosis', url:'https://rootcauseunlocked.com/osteoporosis', symptoms:['History of fracture from minor fall or impact','Loss of height over time','Stooped posture or curved spine','Back pain from compression fractures','Bone pain or tenderness','Family history of osteoporosis','History of low estrogen or testosterone','Long-term steroid or medication use'] },
-  { id:'fibromyalgia', tab:6, name:'Fibromyalgia', url:'https://rootcauseunlocked.com/fibromyalgia', symptoms:['Widespread muscle pain or tenderness','Fatigue that does not improve with rest','Sleep problems or non-restorative sleep','Cognitive difficulties (fibro fog)','Heightened sensitivity to pain, pressure, heat, or cold','Headaches or migraines','Irritable bowel or digestive symptoms','Anxiety or depression'] },
-  { id:'cfs', tab:6, name:'Chronic Fatigue Syndrome (ME/CFS)', url:'https://rootcauseunlocked.com/chronic-fatigue-syndrome', symptoms:['Profound fatigue lasting 6 or more months','Post-exertional malaise (crash after activity)','Unrefreshing sleep','Cognitive impairment or brain fog','Orthostatic intolerance (symptoms worsen when upright)','Widespread pain or frequent headaches','Sore throat or tender lymph nodes','Sensitivity to light, sound, or chemicals'] },
-  { id:'raynauds', tab:6, name:"Raynaud's Syndrome", url:'https://rootcauseunlocked.com/raynauds-syndrome', symptoms:['Fingers or toes turn white, blue, or red in cold','Numbness or tingling during color changes','Cold-triggered episodes','Stress-triggered episodes','Fingers feel cold even in mild temperatures','Pain or throbbing when circulation returns','Episodes become more frequent over time','Skin changes or sores on fingertips in severe cases'] },
-  // TAB 7: ORGAN SUPPORT
-  { id:'kidney', tab:7, name:'Kidney Dysfunction', url:'https://rootcauseunlocked.com/kidney-dysfunction', symptoms:['Changes in urination (frequency, color, or output)','Swelling in legs, ankles, or feet','Persistent fatigue or weakness','Shortness of breath','Nausea or vomiting','Back or flank pain','Decreased appetite','Difficulty concentrating or brain fog'] }
+const SYMPTOMS=[
+  // TAB 0 — GUT & DIGESTIVE (33 symptoms)
+  {id:'g01',tab:0,text:'Heartburn or burning sensation in chest or throat'},
+  {id:'g02',tab:0,text:'Regurgitation of food or sour liquid'},
+  {id:'g03',tab:0,text:'Difficulty swallowing'},
+  {id:'g04',tab:0,text:'Chronic cough or frequent throat clearing'},
+  {id:'g05',tab:0,text:'Abdominal pain or cramping'},
+  {id:'g06',tab:0,text:'Bloating or abdominal distension'},
+  {id:'g07',tab:0,text:'Excessive gas or belching'},
+  {id:'g08',tab:0,text:'Nausea'},
+  {id:'g09',tab:0,text:'Vomiting'},
+  {id:'g10',tab:0,text:'Diarrhea or loose stools'},
+  {id:'g11',tab:0,text:'Constipation'},
+  {id:'g12',tab:0,text:'Alternating diarrhea and constipation'},
+  {id:'g13',tab:0,text:'Urgent, sudden need to use the bathroom'},
+  {id:'g14',tab:0,text:'Feeling of incomplete evacuation after bowel movements'},
+  {id:'g15',tab:0,text:'Mucus in stool'},
+  {id:'g16',tab:0,text:'Blood in stool'},
+  {id:'g17',tab:0,text:'Dark or tarry stools'},
+  {id:'g18',tab:0,text:'Light-colored or pale stools'},
+  {id:'g19',tab:0,text:'Unintended weight loss'},
+  {id:'g20',tab:0,text:'Reduced appetite or feeling full very quickly'},
+  {id:'g21',tab:0,text:'Burning stomach pain worse when the stomach is empty'},
+  {id:'g22',tab:0,text:'Symptoms worsen after eating carbohydrates, fiber, or sugar'},
+  {id:'g23',tab:0,text:'Specific foods reliably trigger or worsen symptoms'},
+  {id:'g24',tab:0,text:'Symptoms worsen lying down or shortly after eating'},
+  {id:'g25',tab:0,text:'Intolerance to fatty or greasy foods'},
+  {id:'g26',tab:0,text:'Right upper abdominal discomfort, pressure, or fullness'},
+  {id:'g27',tab:0,text:'Pain or nausea specifically after fatty or rich meals'},
+  {id:'g28',tab:0,text:'Pain concentrated in the lower left abdomen'},
+  {id:'g29',tab:0,text:'Perianal pain, itching, or drainage'},
+  {id:'g30',tab:0,text:'Recurring yeast infections (vaginal or oral thrush)'},
+  {id:'g31',tab:0,text:'Fungal nail infections'},
+  {id:'g32',tab:0,text:'Nutritional deficiencies despite adequate diet'},
+  {id:'g33',tab:0,text:'Bad breath (halitosis) not explained by dental problems'},
+  // TAB 1 — BRAIN & NERVOUS SYSTEM (28 symptoms)
+  {id:'b01',tab:1,text:'Brain fog or persistent mental cloudiness'},
+  {id:'b02',tab:1,text:'Poor short-term memory or frequent forgetfulness'},
+  {id:'b03',tab:1,text:'Difficulty concentrating or sustaining attention'},
+  {id:'b04',tab:1,text:'Word-finding problems or tip-of-tongue episodes'},
+  {id:'b05',tab:1,text:'Mental exhaustion after cognitive tasks'},
+  {id:'b06',tab:1,text:'Noticeably slow mental processing speed'},
+  {id:'b07',tab:1,text:'Difficulty falling asleep or staying asleep'},
+  {id:'b08',tab:1,text:'Waking feeling unrefreshed despite adequate sleep'},
+  {id:'b09',tab:1,text:'Racing or busy mind that prevents falling asleep'},
+  {id:'b10',tab:1,text:'Persistent worry or anxious thoughts'},
+  {id:'b11',tab:1,text:'Persistent low mood or sadness'},
+  {id:'b12',tab:1,text:'Loss of interest in activities you previously enjoyed'},
+  {id:'b13',tab:1,text:'Emotional dysregulation, mood swings, or irritability'},
+  {id:'b14',tab:1,text:'Impulsivity or acting without thinking'},
+  {id:'b15',tab:1,text:'Restlessness or inability to sit still'},
+  {id:'b16',tab:1,text:'Recurring or frequent headaches'},
+  {id:'b17',tab:1,text:'Throbbing or pulsating head pain'},
+  {id:'b18',tab:1,text:'Sensitivity to light or sound'},
+  {id:'b19',tab:1,text:'Visual disturbances, blurred vision, or aura'},
+  {id:'b20',tab:1,text:'Spinning sensation (vertigo) or feeling the room is moving'},
+  {id:'b21',tab:1,text:'Balance problems, unsteadiness, or coordination difficulties'},
+  {id:'b22',tab:1,text:'Tinnitus — ringing, buzzing, or noise in ears'},
+  {id:'b23',tab:1,text:'Progressive memory loss that affects daily life'},
+  {id:'b24',tab:1,text:'Confusion with time, familiar places, or routine tasks'},
+  {id:'b25',tab:1,text:'Tremor, shaking, or involuntary movements at rest'},
+  {id:'b26',tab:1,text:'Eye floaters — spots or shapes drifting across vision'},
+  {id:'b27',tab:1,text:'Facial twitching or involuntary muscle twitching'},
+  {id:'b28',tab:1,text:'Grinding teeth during sleep (bruxism)'},
+  // TAB 2 — IMMUNE & AUTOIMMUNE (19 symptoms)
+  {id:'i01',tab:2,text:'Swollen or tender lymph nodes'},
+  {id:'i02',tab:2,text:'Recurring sore throats'},
+  {id:'i03',tab:2,text:'Persistent low-grade fever'},
+  {id:'i04',tab:2,text:'Symptoms that reliably flare with stress or illness'},
+  {id:'i05',tab:2,text:'Flu-like symptoms — aches, chills, or malaise — that come and go'},
+  {id:'i06',tab:2,text:'Dry eyes or dry mouth'},
+  {id:'i07',tab:2,text:'Disproportionate fatigue after minor physical or mental effort'},
+  {id:'i08',tab:2,text:'Post-exertional crash — feeling significantly worse after activity'},
+  {id:'i09',tab:2,text:'Heart palpitations or awareness of irregular heartbeat'},
+  {id:'i10',tab:2,text:'Shortness of breath or sensation of not getting enough air'},
+  {id:'i11',tab:2,text:'Migratory joint pain that moves from joint to joint'},
+  {id:'i12',tab:2,text:'Reactions to multiple foods and chemical triggers'},
+  {id:'i13',tab:2,text:'Unexplained flushing or skin redness'},
+  {id:'i14',tab:2,text:'Hives, itching, or unexplained rashes'},
+  {id:'i15',tab:2,text:'Throat tightness or severe anaphylaxis-like reactions'},
+  {id:'i16',tab:2,text:'Runny nose or nasal congestion without active illness'},
+  {id:'i17',tab:2,text:'Sneezing or itchy, watery eyes'},
+  {id:'i18',tab:2,text:'Symptoms worsen seasonally or in high-pollen environments'},
+  {id:'i19',tab:2,text:'Nosebleeds without clear injury or cause'},
+  // TAB 3 — HORMONAL & METABOLIC (22 symptoms — h06, h07 female-only; h10 male-only)
+  {id:'h01',tab:3,text:'Persistent fatigue or chronically low energy'},
+  {id:'h02',tab:3,text:'Unexplained weight gain despite normal or controlled eating'},
+  {id:'h03',tab:3,text:'Difficulty losing weight despite consistent effort'},
+  {id:'h04',tab:3,text:'Cold sensitivity — feeling cold when others are comfortable'},
+  {id:'h05',tab:3,text:'Hair loss or noticeably thinning hair'},
+  {id:'h06',tab:3,sf:'f',text:'Irregular, absent, or unusually heavy menstrual periods'},
+  {id:'h07',tab:3,sf:'f',text:'Excess facial or body hair (hirsutism)'},
+  {id:'h08',tab:3,text:'Persistent acne especially along the jawline or chin'},
+  {id:'h09',tab:3,text:'Reduced sex drive or libido'},
+  {id:'h10',tab:3,sf:'m',text:'Erectile dysfunction'},
+  {id:'h11',tab:3,text:'Decreased muscle mass or strength despite normal activity'},
+  {id:'h12',tab:3,text:'Increased body fat concentrated around the midsection'},
+  {id:'h13',tab:3,text:'Blood sugar instability — energy crashes, intense hunger, sugar cravings'},
+  {id:'h14',tab:3,text:'Strong cravings for salt or salty foods'},
+  {id:'h15',tab:3,text:'Energy worst in the morning or reliable energy crash at 3 to 5 pm'},
+  {id:'h16',tab:3,text:'Dizziness or lightheadedness when standing up'},
+  {id:'h17',tab:3,text:'Heavy reliance on caffeine to function'},
+  {id:'h18',tab:3,text:'Increased thirst or significantly increased urination'},
+  {id:'h19',tab:3,text:'Slow-healing wounds or unusually frequent infections'},
+  {id:'h20',tab:3,text:'Dark patches of skin in skin folds (acanthosis nigricans)'},
+  {id:'h21',tab:3,text:'Enlarged thyroid, throat discomfort, or visible neck fullness'},
+  {id:'h22',tab:3,text:'High blood pressure readings (above 130/80 mmHg)'},
+  // TAB 4 — SKIN & STRUCTURAL (15 symptoms)
+  {id:'sk01',tab:4,text:'Raised, red, or scaly patches on skin'},
+  {id:'sk02',tab:4,text:'Persistent or intense skin itching'},
+  {id:'sk03',tab:4,text:'Skin cracking, bleeding, weeping, or crusting lesions'},
+  {id:'sk04',tab:4,text:'Recurring rashes especially in skin creases or folds'},
+  {id:'sk05',tab:4,text:'Nail changes — pitting, ridging, thickening, or discoloration'},
+  {id:'sk06',tab:4,text:'Skin that bruises very easily or tears with minor contact'},
+  {id:'sk07',tab:4,text:'Skin conditions clearly triggered by stress or specific foods'},
+  {id:'sk08',tab:4,text:'Personal or family history of autoimmune or inflammatory conditions'},
+  {id:'sk09',tab:4,text:'Joint pain or swelling that accompanies skin symptoms'},
+  {id:'sk10',tab:4,text:'Morning spinal stiffness lasting more than 30 minutes'},
+  {id:'sk11',tab:4,text:'Sacroiliac joint pain or persistent lower back pain'},
+  {id:'sk12',tab:4,text:'Pain at tendon or ligament attachment points (enthesitis)'},
+  {id:'sk13',tab:4,text:'Eye inflammation, redness, or uveitis'},
+  {id:'sk14',tab:4,text:'Joint swelling, warmth, or redness'},
+  {id:'sk15',tab:4,text:'Unusual sensitivity to light, sounds, or environmental stimuli'},
+  // TAB 5 — TOXICITY & INFECTIONS (24 symptoms — t07 female-only)
+  {id:'t01',tab:5,text:'History of amalgam dental fillings or occupational metal or chemical exposure'},
+  {id:'t02',tab:5,text:'Sensitivity to perfumes, cleaning products, or chemical fragrances'},
+  {id:'t03',tab:5,text:'Symptoms worsen in new buildings, recently renovated spaces, or after remodeling'},
+  {id:'t04',tab:5,text:'Widespread chemical or environmental sensitivity that has worsened over time'},
+  {id:'t05',tab:5,text:'History of kidney stones'},
+  {id:'t06',tab:5,text:'Burning or discomfort with urination without confirmed infection'},
+  {id:'t07',tab:5,sf:'f',text:'Vulvar pain, burning, or vulvodynia'},
+  {id:'t08',tab:5,text:'Joint pain that feels gritty or sandy'},
+  {id:'t09',tab:5,text:'High-oxalate diet history (spinach, almonds, beets, dark chocolate, sweet potatoes)'},
+  {id:'t10',tab:5,text:'Symptoms worsen in damp, musty, or water-damaged environments'},
+  {id:'t11',tab:5,text:'Unusual sensitivity to alcohol or medications even at low doses'},
+  {id:'t12',tab:5,text:'Symptoms improve when away from home but return when you come back'},
+  {id:'t13',tab:5,text:'History of spending time in tick-inhabited areas — woods, tall grass, hiking trails'},
+  {id:'t14',tab:5,text:'Nerve pain, numbness, or tingling in limbs or extremities'},
+  {id:'t15',tab:5,text:'Symptoms dramatically worsened or triggered after a course of antibiotics'},
+  {id:'t16',tab:5,text:'Visible mold growth in your home, workplace, or school'},
+  {id:'t17',tab:5,text:'History of water damage in your home, workplace, or school'},
+  {id:'t18',tab:5,text:'Treatments or supplements produce effects opposite of what was expected'},
+  {id:'t19',tab:5,text:'Symptoms noticeably worsen around the time of a full moon'},
+  {id:'t20',tab:5,text:'Frequent static electricity sensitivity or static shocks'},
+  {id:'t21',tab:5,text:'Metallic taste in your mouth'},
+  {id:'t22',tab:5,text:'Teeth sensitivity or bleeding gums without dental explanation'},
+  {id:'t23',tab:5,text:'Personal history of cancer'},
+  {id:'t24',tab:5,text:'Low blood cell count (red or white) confirmed by lab work'},
+  // TAB 6 — MUSCULOSKELETAL (22 symptoms)
+  {id:'m01',tab:6,text:'Widespread muscle pain or diffuse body tenderness'},
+  {id:'m02',tab:6,text:'Joint pain that worsens with physical activity'},
+  {id:'m03',tab:6,text:'Morning stiffness that improves after moving around'},
+  {id:'m04',tab:6,text:'Grinding, clicking, or bone-on-bone sensation in joints'},
+  {id:'m05',tab:6,text:'Joint pain or stiffness affecting both sides of the body symmetrically'},
+  {id:'m06',tab:6,text:'Decreased grip strength or hand weakness'},
+  {id:'m07',tab:6,text:'Reduced range of motion in one or more joints'},
+  {id:'m08',tab:6,text:'Chronic widespread pain that does not improve with rest'},
+  {id:'m09',tab:6,text:'Specific tender points or pressure points that are very painful to touch'},
+  {id:'m10',tab:6,text:'Fatigue that does not improve no matter how much you rest'},
+  {id:'m11',tab:6,text:'Profound, debilitating fatigue lasting 6 or more months'},
+  {id:'m12',tab:6,text:'Fingers or toes turning white, blue, or red in cold or emotional stress'},
+  {id:'m13',tab:6,text:'Joint hypermobility — joints bending further than normal'},
+  {id:'m14',tab:6,text:'Frequent joint dislocations, subluxations, or joints that slip out of place'},
+  {id:'m15',tab:6,text:'Fracture from a minor fall or low-impact event'},
+  {id:'m16',tab:6,text:'Noticeable loss of height or increasingly stooped posture over time'},
+  {id:'m17',tab:6,text:'Bone pain or deep bone tenderness'},
+  {id:'m18',tab:6,text:'Family history of osteoporosis or fragility fractures'},
+  {id:'m19',tab:6,text:'Muscle weakness in arms or legs beyond expected deconditioning'},
+  {id:'m20',tab:6,text:'Slowed movement, rigidity, or difficulty initiating movement'},
+  {id:'m21',tab:6,text:'Neck stiffness or audible cracking and grinding in the neck'},
+  {id:'m22',tab:6,text:'Jaw pain, stiffness, clicking, or TMJ dysfunction'},
+  // TAB 7 — ENERGY & SYSTEMIC (15 symptoms)
+  {id:'o01',tab:7,text:'Changes in urination — increased frequency, unusual color, or reduced output'},
+  {id:'o02',tab:7,text:'Swelling in legs, ankles, or feet'},
+  {id:'o03',tab:7,text:'Back or flank pain (kidney area)'},
+  {id:'o04',tab:7,text:'Decreased appetite accompanied by persistent nausea'},
+  {id:'o05',tab:7,text:'Chest pain, tightness, or pressure'},
+  {id:'o06',tab:7,text:'Shortness of breath with exertion that was previously easy'},
+  {id:'o07',tab:7,text:'Rapid, irregular, or forceful heartbeat'},
+  {id:'o08',tab:7,text:'Fainting or near-fainting episodes'},
+  {id:'o09',tab:7,text:'Exercise intolerance — symptoms worsen significantly with physical activity'},
+  {id:'o10',tab:7,text:'History of elevated liver enzymes on lab work'},
+  {id:'o11',tab:7,text:'Tenderness or fullness in the spleen or liver area'},
+  {id:'o12',tab:7,text:'Family history of heart disease or stroke before age 65'},
+  {id:'o13',tab:7,text:'Night sweats not explained by menopause, fever, or room temperature'},
+  {id:'o14',tab:7,text:'Dark circles under eyes without apparent cause'},
+  {id:'o15',tab:7,text:'Chronic inability to clear infections despite appropriate treatment'}
 ];
 
-const TAB_NAMES = ['Gut & Digestive','Brain & Nervous System','Immune & Autoimmune','Hormonal & Metabolic','Skin & Structural','Toxicity & Infections','Musculoskeletal','Organ Support'];
+// ============================================================
+// CONDITIONS — each references SYMPTOM IDs for cross-mapping.
+// sf:'f' = female only | sf:'m' = male only
+// Scoring: checked / valid_sids_for_sex * 100
+// ============================================================
+const CONDITIONS=[
+  // GUT (14)
+  {id:'gerd',name:'Reflux / GERD',url:'https://rootcauseunlocked.com/reflux-gerd',
+    sids:['g01','g02','g03','g04','g06','g08','g23','g24']},
+  {id:'ibs',name:'IBS (Irritable Bowel Syndrome)',url:'https://rootcauseunlocked.com/ibs',
+    sids:['g05','g06','g07','g10','g11','g12','g13','g14','g15','g23','i04']},
+  {id:'crohns',name:"Crohn's Disease",url:'https://rootcauseunlocked.com/crohns-disease',
+    sids:['g05','g08','g09','g10','g16','g19','g20','g28','g29','h01','i03']},
+  {id:'uc',name:'Ulcerative Colitis',url:'https://rootcauseunlocked.com/ulcerative-colitis',
+    sids:['g05','g10','g13','g16','g19','h01','sk13','sk14','i04']},
+  {id:'nafld',name:'NAFLD (Fatty Liver)',url:'https://rootcauseunlocked.com/nafld',
+    sids:['g06','g25','g26','h01','h02','h13','b01','o10']},
+  {id:'leakygut',name:'Leaky Gut Syndrome',url:'https://rootcauseunlocked.com/leaky-gut',
+    sids:['g05','g06','g07','g23','h01','b01','sk04','i14','i12','g32']},
+  {id:'sibo',name:'SIBO (Small Intestinal Bacterial Overgrowth)',url:'https://rootcauseunlocked.com/sibo',
+    sids:['g05','g06','g07','g08','g10','g11','g22','b01','g32','t15','g33']},
+  {id:'dysbiosis',name:'Gut Dysbiosis',url:'https://rootcauseunlocked.com/dysbiosis',
+    sids:['g06','g07','g10','g11','h01','h13','sk04','b01','b13','g33']},
+  {id:'gastritis',name:'Gastritis',url:'https://rootcauseunlocked.com/gastritis',
+    sids:['g05','g06','g07','g08','g20','g21','g24','g33']},
+  {id:'hpylori',name:'H. pylori Infection',url:'https://rootcauseunlocked.com/h-pylori',
+    sids:['g06','g07','g08','g09','g17','g19','g20','g21','g33','t21']},
+  {id:'diverticulitis',name:'Diverticulitis',url:'https://rootcauseunlocked.com/diverticulitis',
+    sids:['g05','g06','g08','g09','g10','g11','g28','i03']},
+  {id:'parasitic',name:'Parasitic Infection',url:'https://rootcauseunlocked.com/parasitic-infection',
+    sids:['g05','g06','g08','g09','g10','g19','g29','b01','h01','t19','b26','b28','o13','o14','b27']},
+  {id:'gallbladder',name:'Gallbladder Dysfunction',url:'https://rootcauseunlocked.com/gallbladder',
+    sids:['g05','g06','g08','g17','g18','g25','g26','g27']},
+  {id:'candida',name:'Candida Overgrowth',url:'https://rootcauseunlocked.com/candida',
+    sids:['g06','g07','g22','g30','g31','h01','h13','b01','b13','sk04','g33']},
+  // BRAIN (10)
+  {id:'adhd',name:'ADHD',url:'https://rootcauseunlocked.com/adhd',
+    sids:['b01','b02','b03','b05','b07','b13','b14','b15','h01']},
+  {id:'brain',name:'Brain Dysfunction / Cognitive Decline',url:'https://rootcauseunlocked.com/brain-dysfunction',
+    sids:['b01','b02','b03','b04','b05','b06','b13','b16']},
+  {id:'vertigo',name:'Vertigo / Vestibular Dysfunction',url:'https://rootcauseunlocked.com/vertigo',
+    sids:['b20','b21','b16','b08','b22','g08','o08','h16']},
+  {id:'ms',name:'Multiple Sclerosis',url:'https://rootcauseunlocked.com/multiple-sclerosis',
+    sids:['t14','m19','b19','b21','h01','i10','o01','b03','sk14','i04','b27','m21']},
+  {id:'migraine',name:'Migraines / Chronic Headaches',url:'https://rootcauseunlocked.com/migraines',
+    sids:['b16','b17','b18','b19','g08','i18','sk07','b22']},
+  {id:'insomnia',name:'Insomnia / Sleep Dysfunction',url:'https://rootcauseunlocked.com/insomnia',
+    sids:['b07','b08','b09','b10','b13','h01','h17']},
+  {id:'anxdep',name:'Anxiety / Depression',url:'https://rootcauseunlocked.com/anxiety-depression',
+    sids:['b05','b07','b10','b11','b12','b13','b16','g05','g08','h01','b28']},
+  {id:'neuropathy',name:'Neuropathy',url:'https://rootcauseunlocked.com/neuropathy',
+    sids:['t14','b18','m01','m19','o01','b16','b07','m06']},
+  {id:'alzheimers',name:"Alzheimer's / Dementia",url:'https://rootcauseunlocked.com/alzheimers-dementia',
+    sids:['b23','b24','b02','b04','b11','b03','b12']},
+  {id:'parkinsons',name:"Parkinson's Disease",url:'https://rootcauseunlocked.com/parkinsons-disease',
+    sids:['b25','m03','m19','m20','b21','b22','b07','i04']},
+  // IMMUNE (7)
+  {id:'autoimmune',name:'Autoimmune Disease (General)',url:'https://rootcauseunlocked.com/autoimmune-disease',
+    sids:['h01','sk14','sk04','b01','i06','i03','i04','i05','h04','sk08','o15']},
+  {id:'ebv',name:'EBV / Epstein-Barr Reactivation',url:'https://rootcauseunlocked.com/epstein-barr',
+    sids:['h01','i01','i02','i03','m19','b01','o11','i04','i07','o13','t24','o15']},
+  {id:'mcas',name:'Mast Cell Activation Syndrome (MCAS)',url:'https://rootcauseunlocked.com/mcas',
+    sids:['i12','i13','i14','i15','g05','g10','b01','h01','i04','i19']},
+  {id:'longcovid',name:'Long COVID',url:'https://rootcauseunlocked.com/long-covid',
+    sids:['i07','i08','b01','i10','i09','b07','b10','i04','h01']},
+  {id:'lyme',name:'Lyme Disease / Tick-Borne Illness',url:'https://rootcauseunlocked.com/lyme-disease',
+    sids:['i11','h01','b01','m01','t14','i09','i05','b07','t13','m21','b27','o13','i19']},
+  {id:'allergies',name:'Allergies / Histamine Intolerance',url:'https://rootcauseunlocked.com/allergies-histamine',
+    sids:['i12','i13','i14','i16','i17','i18','b16','g08','i10','h01']},
+  {id:'eds',name:'Ehlers-Danlos Syndrome (EDS)',url:'https://rootcauseunlocked.com/ehlers-danlos',
+    sids:['m13','m14','m08','sk06','h01','g06','b10','i09','h16','sk15']},
+  // HORMONAL (9 — pcos female-only, lowtestosterone male-only)
+  {id:'adrenal',name:'Adrenal Dysfunction / HPA Axis',url:'https://rootcauseunlocked.com/adrenal-dysfunction',
+    sids:['h01','h14','h15','h16','h17','b07','h04','i04','b10','o14','o13']},
+  {id:'pcos',sf:'f',name:'PCOS (Polycystic Ovary Syndrome)',url:'https://rootcauseunlocked.com/pcos',
+    sids:['h03','h05','h06','h07','h08','h12','h13','b13']},
+  {id:'cholesterol',name:'High Cholesterol / Dyslipidemia',url:'https://rootcauseunlocked.com/high-cholesterol',
+    sids:['h01','h02','h12','h13','b01','o12','h22']},
+  {id:'htn',name:'Hypertension',url:'https://rootcauseunlocked.com/hypertension',
+    sids:['h22','b16','h16','i10','o05','o12','h01','o06']},
+  {id:'pots',name:'POTS (Postural Orthostatic Tachycardia)',url:'https://rootcauseunlocked.com/pots',
+    sids:['h16','i09','h01','b01','o08','o09','g08','o07']},
+  {id:'hashimotos',name:"Hashimoto's Thyroiditis",url:'https://rootcauseunlocked.com/hashimotos-thyroiditis',
+    sids:['h01','h02','h04','b01','b02','h05','g11','b11','h21']},
+  {id:'lowtestosterone',sf:'m',name:'Low Testosterone (Men)',url:'https://rootcauseunlocked.com/low-testosterone',
+    sids:['h01','h09','h10','h11','h12','b11','b03','m17']},
+  {id:'diabetes',name:'Type 2 Diabetes',url:'https://rootcauseunlocked.com/type-2-diabetes',
+    sids:['h01','h13','h18','h19','h20','b19','t14','h03','h02']},
+  {id:'heartdisease',name:'Heart Disease',url:'https://rootcauseunlocked.com/heart-disease',
+    sids:['o05','o06','h01','o07','h16','o02','o12','h22','i09']},
+  // SKIN & STRUCTURAL (5)
+  {id:'psoriasis',name:'Psoriasis',url:'https://rootcauseunlocked.com/psoriasis',
+    sids:['sk01','sk02','sk03','sk05','sk07','sk08','sk09','i03']},
+  {id:'eczema',name:'Eczema / Atopic Dermatitis',url:'https://rootcauseunlocked.com/eczema',
+    sids:['sk01','sk02','sk03','sk04','sk07','sk08','i16','b07']},
+  {id:'psa',name:'Psoriatic Arthritis / Ankylosing Spondylitis',url:'https://rootcauseunlocked.com/psoriatic-arthritis',
+    sids:['sk09','sk10','sk11','sk12','sk13','sk14','h01','sk08','i04']},
+  {id:'inflammatoryarthritis',name:'Inflammatory Arthritis',url:'https://rootcauseunlocked.com/inflammatory-arthritis',
+    sids:['sk09','sk10','sk14','m03','m07','m05','h01','i04']},
+  {id:'mold',name:'Mold Toxicity / Biotoxin Illness',url:'https://rootcauseunlocked.com/mold-toxicity',
+    sids:['h01','b01','sk15','m08','i10','h18','t14','b13','t10','t12','i07','t16','t17','t18','t20','i19']},
+  // TOXICITY (4 — including new RAD condition)
+  {id:'heavymetals',name:'Heavy Metal Toxicity',url:'https://rootcauseunlocked.com/heavy-metal-toxicity',
+    sids:['b01','b02','h01','t14','m19','b16','b13','t01','t11','t21','t22','t23','o13','m22']},
+  {id:'mcs',name:'Multiple Chemical Sensitivity',url:'https://rootcauseunlocked.com/multiple-chemical-sensitivity',
+    sids:['t02','t03','t04','h01','b01','b16','g08','sk04','t11','t16','t18','t20']},
+  {id:'oxalate',name:'Oxalate Toxicity',url:'https://rootcauseunlocked.com/oxalate-toxicity',
+    sids:['t05','t06','t07','t08','t09','h01','b01','i04']},
+  {id:'rad',name:'Radioactive Elements / Environmental Radiation',url:'https://rootcauseunlocked.com/radioactive-elements',
+    sids:['t23','t24','o15','h01','h05','i09','t14','g08','g20','t22','m22','b22','h21','t06','g03','sk01','t01','t18']},
+  // MUSCULOSKELETAL (6)
+  {id:'rheumatoid',name:'Rheumatoid Arthritis',url:'https://rootcauseunlocked.com/rheumatoid-arthritis',
+    sids:['m05','m03','m06','m07','sk14','h01','i05','i03','i04','m21']},
+  {id:'osteoarthritis',name:'Osteoarthritis',url:'https://rootcauseunlocked.com/osteoarthritis',
+    sids:['m02','m03','m04','m07','sk14','h01']},
+  {id:'osteoporosis',name:'Osteoporosis',url:'https://rootcauseunlocked.com/osteoporosis',
+    sids:['m15','m16','m17','m18','h05','sk10','o03']},
+  {id:'fibromyalgia',name:'Fibromyalgia',url:'https://rootcauseunlocked.com/fibromyalgia',
+    sids:['m08','m09','m10','b07','sk15','b16','g05','b10','b11','i04','m22','b28']},
+  {id:'cfs',name:'Chronic Fatigue Syndrome (ME/CFS)',url:'https://rootcauseunlocked.com/chronic-fatigue-syndrome',
+    sids:['m10','m11','i08','b08','b01','h16','m08','i02','sk15','i07','t24','o15']},
+  {id:'raynauds',name:"Raynaud's Syndrome",url:'https://rootcauseunlocked.com/raynauds-syndrome',
+    sids:['m12','t14','sk06','o08','b10','i04']},
+  // ORGAN SUPPORT (1)
+  {id:'kidney',name:'Kidney Dysfunction',url:'https://rootcauseunlocked.com/kidney-dysfunction',
+    sids:['o01','o02','o03','o04','h01','i10','h19','b01']}
+];
+
+const TAB_NAMES=['Gut & Digestive','Brain & Nervous System','Immune & Autoimmune','Hormonal & Metabolic','Skin & Structural','Toxicity & Infections','Musculoskeletal','Energy & Systemic'];
 
 // ============================================================
-// BUILD UI
+// SEX FILTER — hide/show sex-specific symptoms dynamically
 // ============================================================
-function buildUI() {
-  for (let t = 0; t < 8; t++) {
-    const body = document.getElementById('body-' + t);
-    const conds = CONDITIONS.filter(c => c.tab === t);
-    body.innerHTML = conds.map(cond => `
-      <div class="condition-block">
-        <div class="condition-label">${cond.name}</div>
-        <div class="symptoms-grid">
-          ${cond.symptoms.map((sym, i) => `
-            <label class="symptom-label" id="lbl-${cond.id}-${i}">
-              <input type="checkbox" id="chk-${cond.id}-${i}" data-cond="${cond.id}" onchange="handleCheck(this)">
-              ${sym}
-            </label>`).join('')}
-        </div>
-      </div>`).join('');
+function applySexFilter(sex){
+  SYMPTOMS.forEach(sym=>{
+    if(!sym.sf)return;
+    const label=document.getElementById('lbl-'+sym.id);
+    if(!label)return;
+    const hide=(sym.sf==='f'&&sex==='Male')||(sym.sf==='m'&&sex==='Female');
+    label.style.display=hide?'none':'';
+    if(hide){
+      const cb=document.getElementById('chk-'+sym.id);
+      if(cb){cb.checked=false;label.classList.remove('checked');}
+    }
+  });
+}
+
+// ============================================================
+// BUILD UI — one checkbox per symptom, no repeats
+// ============================================================
+function buildUI(){
+  for(let t=0;t<8;t++){
+    const body=document.getElementById('body-'+t);
+    const tabSymptoms=SYMPTOMS.filter(s=>s.tab===t);
+    body.innerHTML='<div class="symptoms-grid">'+tabSymptoms.map(sym=>`<label class="symptom-label" id="lbl-${sym.id}"><input type="checkbox" id="chk-${sym.id}" onchange="handleCheck(this)">${sym.text}</label>`).join('')+'</div>';
   }
 }
 
-function handleCheck(cb) {
-  cb.closest('.symptom-label').classList.toggle('checked', cb.checked);
-}
+function handleCheck(cb){cb.closest('.symptom-label').classList.toggle('checked',cb.checked);}
 
-let currentTab = 0;
-const TOTAL_TABS = 8;
+let currentTab=0;
+const TOTAL_TABS=8;
 
-function goToTab(idx) {
-  document.getElementById('tab-' + currentTab).classList.remove('active');
-  const btns = document.querySelectorAll('.tab-btn');
+function goToTab(idx){
+  document.getElementById('tab-'+currentTab).classList.remove('active');
+  const btns=document.querySelectorAll('.tab-btn');
   btns[currentTab].classList.remove('active');
-  if (idx !== currentTab) btns[currentTab].classList.add('done');
-  currentTab = idx;
-  document.getElementById('tab-' + currentTab).classList.add('active');
-  btns.forEach((b, i) => b.classList.toggle('active', i === currentTab));
+  if(idx!==currentTab)btns[currentTab].classList.add('done');
+  currentTab=idx;
+  document.getElementById('tab-'+currentTab).classList.add('active');
+  btns.forEach((b,i)=>b.classList.toggle('active',i===currentTab));
   updateNav();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-
-function nextTab() {
-  if (currentTab < TOTAL_TABS - 1) goToTab(currentTab + 1);
-  else generateResults();
-}
-
-function prevTab() {
-  if (currentTab > 0) goToTab(currentTab - 1);
-}
-
-function updateNav() {
-  const prev = document.getElementById('btn-prev');
-  const next = document.getElementById('btn-next');
-  prev.style.visibility = currentTab === 0 ? 'hidden' : 'visible';
-  const pct = Math.round(((currentTab + 1) / TOTAL_TABS) * 100);
-  document.getElementById('prog-fill').style.width = pct + '%';
-  document.getElementById('prog-title').innerHTML = 'Section ' + (currentTab + 1) + ' of ' + TOTAL_TABS + ' &mdash; ' + TAB_NAMES[currentTab];
-  document.getElementById('prog-pct').textContent = pct + '% complete';
-  if (currentTab === TOTAL_TABS - 1) {
-    next.textContent = 'Generate My Results \u2192';
-    next.className = 'btn-nav btn-next btn-generate';
-  } else {
-    next.textContent = 'Next Section \u2192';
-    next.className = 'btn-nav btn-next';
-  }
+function nextTab(){if(currentTab<TOTAL_TABS-1)goToTab(currentTab+1);else generateResults();}
+function prevTab(){if(currentTab>0)goToTab(currentTab-1);}
+function updateNav(){
+  document.getElementById('btn-prev').style.visibility=currentTab===0?'hidden':'visible';
+  const pct=Math.round(((currentTab+1)/TOTAL_TABS)*100);
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-title').innerHTML='Section '+(currentTab+1)+' of '+TOTAL_TABS+' &mdash; '+TAB_NAMES[currentTab];
+  document.getElementById('prog-pct').textContent=pct+'% complete';
+  const next=document.getElementById('btn-next');
+  if(currentTab===TOTAL_TABS-1){next.textContent='Generate My Results \u2192';next.className='btn-nav btn-next btn-generate';}
+  else{next.textContent='Next Section \u2192';next.className='btn-nav btn-next';}
 }
 
 // ============================================================
-// SCORING
+// SCORING — sex-aware cross-condition symptom mapping
 // ============================================================
-function scoreAll() {
-  return CONDITIONS.map(cond => {
-    let checked = 0;
-    cond.symptoms.forEach((_, i) => {
-      const cb = document.getElementById('chk-' + cond.id + '-' + i);
-      if (cb && cb.checked) checked++;
-    });
-    const pct = Math.round((checked / cond.symptoms.length) * 100);
-    return { ...cond, checked, pct };
-  }).sort((a, b) => b.pct - a.pct);
-}
-
-// ============================================================
-// GENERATE RESULTS
-// ============================================================
-function generateResults() {
-  const fname = document.getElementById('fname').value.trim();
-  if (!fname) {
-    const msg = document.getElementById('val-msg');
-    msg.style.display = 'block';
-    msg.textContent = 'Please enter your first name before generating your results.';
-    document.getElementById('fname').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-  document.getElementById('val-msg').style.display = 'none';
-  document.getElementById('gate-fname').value = fname;
-  document.getElementById('email-gate').style.display = 'flex';
-}
-
-function submitEmailGate() {
-  const fn = document.getElementById('gate-fname').value.trim();
-  const em = document.getElementById('gate-email').value.trim();
-  const err = document.getElementById('gate-error');
-  if (!fn || !em) { err.textContent = 'Please fill in both fields.'; err.style.display = 'block'; return; }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { err.textContent = 'Please enter a valid email address.'; err.style.display = 'block'; return; }
-  err.style.display = 'none';
-
-  const scored = scoreAll();
-  const top = scored[0];
-
-  // ── GHL webhook ── replace YOUR_WEBHOOK_ID_HERE with your actual GHL webhook ID
-  fetch('https://hooks.gohighlevel.com/hooks/YOUR_WEBHOOK_ID_HERE', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ firstName: fn, email: em, topCondition: top.name, topScore: top.pct })
-  }).catch(() => {});
-
-  document.getElementById('email-gate').style.display = 'none';
-  doShowResults(fn, em);
-}
-
-// ============================================================
-// DISPLAY RESULTS + AI ANALYSIS
-// ============================================================
-async function doShowResults(gateFirstName, gateEmail) {
-  const scored = scoreAll();
-  const top5 = scored.slice(0, 5);
-  const fname = document.getElementById('fname').value.trim();
-  const lname = document.getElementById('lname').value.trim();
-  const fullName = fname + (lname ? ' ' + lname : '');
-  const dob = document.getElementById('dob').value;
-  const sex = document.getElementById('sex').value;
-  const concern = document.getElementById('concern').value.trim();
-
-  // Calculate age
-  let ageStr = '';
-  if (dob) {
-    const age = Math.floor((new Date() - new Date(dob)) / (365.25 * 24 * 60 * 60 * 1000));
-    if (!isNaN(age) && age > 0 && age < 120) ageStr = age + '-year-old ';
-  }
-
-  document.getElementById('res-name').textContent = fullName;
-  document.getElementById('res-date').textContent = 'Assessment completed: ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-  // Top 5 cards
-  const rankClasses = ['rank1','rank2','rank3','',''];
-  document.getElementById('top5-cards').innerHTML = top5.map((c, i) => `
-    <div class="top5-card ${rankClasses[i]}">
-      <div class="top5-left">
-        <div class="top5-rank">#${i + 1} Priority Area</div>
-        <div class="top5-name">${c.name}</div>
-        <div class="top5-track"><div class="top5-fill" data-w="${c.pct}" style="width:0%"></div></div>
-      </div>
-      <div class="top5-pct">${c.pct}%</div>
-    </div>`).join('');
-
-  // Program CTAs — top 3
-  const top3 = scored.slice(0, 3);
-  document.getElementById('program-btns').innerHTML = top3.map((c, i) => `
-    <a href="${c.url || 'https://rootcauseunlocked.com'}" class="btn-program ${i > 0 ? 'secondary' : ''}" target="_blank">
-      <span class="bp-left">${i === 0 ? '🔑 ' : ''}Unlock Your ${c.name} Recovery</span>
-      <span class="bp-arrow">&#8594;</span>
-    </a>`).join('');
-
-  // All 55 bars
-  document.getElementById('all-bars').innerHTML = scored.map((c, i) => {
-    const color = c.pct >= 60 ? '#c0392b' : c.pct >= 40 ? '#d35400' : c.pct >= 20 ? '#d4ac0d' : '#3B8FE5';
-    const isTop = i < 5;
-    return `<div class="result-row">
-      <div class="result-row-top">
-        <span class="result-name${isTop ? ' top' : ''}">${isTop ? '★ ' : ''}${c.name}</span>
-        <span class="result-pct" style="color:${color}">${c.pct}%</span>
-      </div>
-      <div class="result-count">${c.checked} of ${c.symptoms.length} symptoms</div>
-      <div class="result-track"><div class="result-fill" data-w="${c.pct}" style="width:0%;background:${color}"></div></div>
-    </div>`;
-  }).join('');
-
-  // Show results section
-  document.getElementById('quiz-section').style.display = 'none';
-  document.getElementById('results-section').style.display = 'block';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // Animate bars after a short delay
-  setTimeout(() => {
-    document.querySelectorAll('[data-w]').forEach(el => {
-      el.style.transition = 'width 1.1s cubic-bezier(.4,0,.2,1)';
-      el.style.width = el.getAttribute('data-w') + '%';
-    });
-  }, 200);
-
-  // ── AI TERRAIN ANALYSIS ──
-  await runTerrainAnalysis(fullName, ageStr, sex, concern, top5, scored);
-}
-
-// Loading messages cycling
-const LOAD_MSGS = [
-  'Mapping your terrain pattern…',
-  'Identifying drainage priorities…',
-  'Analyzing symptom cascades…',
-  'Building your clinical picture…',
-  'Almost ready…'
-];
-
-async function runTerrainAnalysis(fullName, ageStr, sex, concern, top5, scored) {
-  const textEl = document.getElementById('terrain-analysis-text');
-
-  // Start loading animation with cycling messages
-  let msgIdx = 0;
-  textEl.innerHTML = `<div class="terrain-loading"><div class="pulse-ring"></div><p id="loading-msg-text">${LOAD_MSGS[0]}</p></div>`;
-  const msgInterval = setInterval(() => {
-    msgIdx = (msgIdx + 1) % LOAD_MSGS.length;
-    const el = document.getElementById('loading-msg-text');
-    if (el) el.textContent = LOAD_MSGS[msgIdx];
-  }, 2200);
-
-  // Build symptom summary for the prompt
-  const highScoring = scored.filter(c => c.pct >= 50).map(c => c.name);
-  const top5Summary = top5.map(c => `${c.name} (${c.pct}% symptom match, ${c.checked} of ${c.symptoms.length} symptoms)`).join('; ');
-  const sexDisplay = sex && sex !== 'Prefer not to say' ? sex.toLowerCase() : 'patient';
-  const concernText = concern ? `Their stated primary concern is: "${concern}".` : '';
-  const highCount = scored.filter(c => c.pct >= 60).length;
-
-  const systemPrompt = `You are Dr. Adam Seay, DC — a functional medicine and chiropractic practitioner with over 20 years of clinical experience at Root Health NC in Garner, NC. You use a terrain-based, drainage-first clinical approach rooted in Physica Energetics methodology. You integrate functional lab testing (Vibrant Wellness, GI-MAP) to understand why patients are sick at a root cause level, not just what symptoms they have.
-
-Your philosophy: The body does not malfunction randomly. Chronic illness follows a sequence — toxin burden builds, drainage pathways become overwhelmed, gut integrity fails, hormonal and immune systems destabilize. You look for that sequence, not isolated diagnoses. You never name a program. You never say "Unlock Your." You write in flowing paragraphs, never bullet points. You address the patient by first name. You speak with warm clinical authority — you have seen this pattern before, and you know what it means.
-
-Write exactly 3 paragraphs. Under 260 words total. Second person ("your"). No bullet points. No em-dashes. Do not name any specific supplement products or brand names. Do not say "Unlock Your." Do not mention specific lab panels by name. End the third paragraph with a single sentence that invites them to take the next step toward clinical evaluation — without naming a specific program or product.`;
-
-  const userPrompt = `Patient: ${ageStr}${sexDisplay} named ${fullName}. ${concernText}
-Top 5 condition matches: ${top5Summary}.
-Conditions scoring 60%+: ${highCount > 0 ? highScoring.join(', ') : 'None'}.
-
-Write a 3-paragraph personalized terrain analysis in Dr. Adam Seay's clinical voice. Paragraph 1: What this symptom pattern reveals about their terrain — the specific interplay between their top-scoring conditions. Be concrete and specific to their pattern, not generic. Paragraph 2: Explain the likely sequence — which root cause likely came first and how it created the downstream cascade that produced the other high-scoring conditions. Use terrain language (drainage, toxic load, gut integrity, HPA axis, etc.). Paragraph 3: Why conventional medicine has likely missed this, and what a terrain-first approach would look for. End with a single warm sentence inviting them toward clinical evaluation.`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: userPrompt }]
-      })
-    });
-
-    clearInterval(msgInterval);
-
-    if (!response.ok) throw new Error('API error');
-
-    const data = await response.json();
-    const rawText = data.content.map(b => b.text || '').join('').trim();
-
-    // Split into paragraphs and render
-    const paragraphs = rawText.split(/\n\n+/).filter(p => p.trim().length > 0);
-    textEl.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
-
-  } catch (err) {
-    clearInterval(msgInterval);
-    // Graceful fallback — still clinically useful
-    const top3Names = top5.slice(0,3).map(c => c.name).join(', ');
-    textEl.innerHTML = `<p>${fullName}, your symptom assessment reveals significant overlap across ${top5.length > 3 ? 'multiple' : 'several'} terrain systems — with your highest signals in ${top3Names}. In 20 years of clinical practice, I have seen this pattern consistently: these conditions rarely arise in isolation. They are markers of a terrain under load.</p>
-<p>The sequence that typically drives this pattern begins upstream — a drainage or detoxification burden that overwhelms the body's clearance pathways, which then compromises gut integrity, which in turn destabilizes the hormonal and immune responses your other high-scoring areas reflect. Conventional testing often misses this because it looks at each system separately, rather than reading the cascade.</p>
-<p>A terrain-first approach means working from the outside in — supporting drainage pathways before attempting to address specific conditions. When we do this in the right sequence, patients are often surprised by how much changes that they had stopped believing could change. If your results resonate with you, the logical next step is a clinical evaluation to map your terrain precisely and build a protocol designed for your specific sequence.</p>`;
-  }
-}
-
-// ============================================================
-// RETAKE
-// ============================================================
-function retakeQuiz() {
-  document.getElementById('results-section').style.display = 'none';
-  document.getElementById('quiz-section').style.display = 'block';
-  document.querySelectorAll('input[type=checkbox]').forEach(cb => {
-    cb.checked = false;
-    cb.closest('.symptom-label').classList.remove('checked');
+function scoreAll(){
+  const selectedSex=document.getElementById('sex').value;
+  const checkedIds=new Set();
+  SYMPTOMS.forEach(sym=>{
+    if(sym.sf==='f'&&selectedSex==='Male')return;
+    if(sym.sf==='m'&&selectedSex==='Female')return;
+    const cb=document.getElementById('chk-'+sym.id);
+    if(cb&&cb.checked)checkedIds.add(sym.id);
   });
-  currentTab = 0;
-  document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === 0));
-  document.querySelectorAll('.tab-btn').forEach((b, i) => {
-    b.classList.toggle('active', i === 0);
-    b.classList.remove('done');
-  });
+  return CONDITIONS.filter(cond=>{
+    if(cond.sf==='f'&&selectedSex==='Male')return false;
+    if(cond.sf==='m'&&selectedSex==='Female')return false;
+    return true;
+  }).map(cond=>{
+    // Exclude sex-filtered symptoms from this condition's denominator
+    const validSids=cond.sids.filter(sid=>{
+      const sym=SYMPTOMS.find(s=>s.id===sid);
+      if(!sym)return true;
+      if(sym.sf==='f'&&selectedSex==='Male')return false;
+      if(sym.sf==='m'&&selectedSex==='Female')return false;
+      return true;
+    });
+    const checked=validSids.filter(id=>checkedIds.has(id)).length;
+    const pct=validSids.length>0?Math.round((checked/validSids.length)*100):0;
+    return{...cond,checked,total:validSids.length,pct};
+  }).sort((a,b)=>b.pct-a.pct);
+}
+
+// ============================================================
+// GATE & RESULTS
+// ============================================================
+function generateResults(){
+  const fname=document.getElementById('fname').value.trim();
+  if(!fname){const msg=document.getElementById('val-msg');msg.style.display='block';msg.textContent='Please enter your first name before generating your results.';document.getElementById('fname').scrollIntoView({behavior:'smooth',block:'center'});return;}
+  document.getElementById('val-msg').style.display='none';
+  document.getElementById('gate-fname').value=fname;
+  document.getElementById('email-gate').style.display='flex';
+}
+
+function submitEmailGate(){
+  const fn=document.getElementById('gate-fname').value.trim();
+  const em=document.getElementById('gate-email').value.trim();
+  const err=document.getElementById('gate-error');
+  if(!fn||!em){err.textContent='Please fill in both fields.';err.style.display='block';return;}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.textContent='Please enter a valid email address.';err.style.display='block';return;}
+  err.style.display='none';
+  const scored=scoreAll();
+  fetch('https://hooks.gohighlevel.com/hooks/YOUR_WEBHOOK_ID_HERE',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({firstName:fn,email:em,topCondition:scored[0].name,topScore:scored[0].pct})}).catch(()=>{});
+  document.getElementById('email-gate').style.display='none';
+  doShowResults(fn);
+}
+
+async function doShowResults(gateFirstName){
+  const scored=scoreAll();
+  const top5=scored.slice(0,5);
+  const fname=document.getElementById('fname').value.trim();
+  const lname=document.getElementById('lname').value.trim();
+  const fullName=fname+(lname?' '+lname:'');
+  const dob=document.getElementById('dob').value;
+  const sex=document.getElementById('sex').value;
+  const concern=document.getElementById('concern').value.trim();
+  let ageStr='';
+  if(dob){const age=Math.floor((new Date()-new Date(dob))/(365.25*24*60*60*1000));if(!isNaN(age)&&age>0&&age<120)ageStr=age+'-year-old ';}
+  document.getElementById('res-name').textContent=fullName;
+  document.getElementById('res-date').textContent='Assessment completed: '+new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  const rankClasses=['rank1','rank2','rank3','',''];
+  document.getElementById('top5-cards').innerHTML=top5.map((c,i)=>`<div class="top5-card ${rankClasses[i]}"><div class="top5-left"><div class="top5-rank">#${i+1} Priority Area</div><div class="top5-name">${c.name}</div><div class="top5-track"><div class="top5-fill" data-w="${c.pct}" style="width:0%"></div></div></div><div class="top5-pct">${c.pct}%</div></div>`).join('');
+  const top3=scored.slice(0,3);
+  document.getElementById('program-btns').innerHTML=top3.map((c,i)=>`<a href="${c.url||'https://rootcauseunlocked.com'}" class="btn-program ${i>0?'secondary':''}" target="_blank"><span>${i===0?'🔑 ':''}Unlock Your ${c.name} Recovery</span><span class="bp-arrow">&#8594;</span></a>`).join('');
+  document.getElementById('all-bars').innerHTML=scored.map((c,i)=>{const color=c.pct>=60?'#c0392b':c.pct>=40?'#d35400':c.pct>=20?'#d4ac0d':'#3B8FE5';const isTop=i<5;return`<div class="result-row"><div class="result-row-top"><span class="result-name${isTop?' top':''}">${isTop?'★ ':''}${c.name}</span><span class="result-pct" style="color:${color}">${c.pct}%</span></div><div class="result-count">${c.checked} of ${c.total} signals matched</div><div class="result-track"><div class="result-fill" data-w="${c.pct}" style="width:0%;background:${color}"></div></div></div>`;}).join('');
+  document.getElementById('quiz-section').style.display='none';
+  document.getElementById('results-section').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(()=>{document.querySelectorAll('[data-w]').forEach(el=>{el.style.transition='width 1.1s cubic-bezier(.4,0,.2,1)';el.style.width=el.getAttribute('data-w')+'%';});},200);
+  await runTerrainAnalysis(fullName,ageStr,sex,concern,top5,scored);
+}
+
+const LOAD_MSGS=['Mapping your terrain pattern\u2026','Identifying drainage priorities\u2026','Analyzing symptom cascades\u2026','Building your clinical picture\u2026','Almost ready\u2026'];
+
+async function runTerrainAnalysis(fullName,ageStr,sex,concern,top5,scored){
+  const textEl=document.getElementById('terrain-analysis-text');
+  let msgIdx=0;
+  textEl.innerHTML=`<div class="terrain-loading"><div class="pulse-ring"></div><p id="loading-msg-text">${LOAD_MSGS[0]}</p></div>`;
+  const msgInterval=setInterval(()=>{msgIdx=(msgIdx+1)%LOAD_MSGS.length;const el=document.getElementById('loading-msg-text');if(el)el.textContent=LOAD_MSGS[msgIdx];},2200);
+  const highScoring=scored.filter(c=>c.pct>=50).map(c=>c.name);
+  const top5Summary=top5.map(c=>`${c.name} (${c.pct}% match, ${c.checked} of ${c.total} signals)`).join('; ');
+  const sexDisplay=sex&&sex!=='Prefer not to say'?sex.toLowerCase():'patient';
+  const concernText=concern?`Their stated primary concern is: "${concern}".`:'';
+  const highCount=scored.filter(c=>c.pct>=60).length;
+  const systemPrompt=`You are Dr. Adam Seay, DC, a functional medicine and chiropractic practitioner with over 20 years of clinical experience at Root Health NC in Garner, NC. You use a terrain-based, drainage-first clinical approach rooted in Physica Energetics methodology, integrated with functional lab testing.\n\nYour philosophy: Chronic illness follows a sequence. Toxin burden builds, drainage pathways become overwhelmed, gut integrity fails, hormonal and immune systems destabilize. You read the cascade, not isolated diagnoses. Write in flowing paragraphs, never bullet points. Address the patient by first name. Speak with warm clinical authority. Never name supplement products or brands. Never say Unlock Your. Never mention lab panel brand names. Use sex-appropriate language based on the patient sex provided.\n\nWrite exactly 3 paragraphs. Under 260 words total. Second person. End the third paragraph with one sentence inviting clinical evaluation.`;
+  const userPrompt=`Patient: ${ageStr}${sexDisplay} named ${fullName}. ${concernText}\nTop 5 condition matches: ${top5Summary}.\nConditions scoring 60%+: ${highCount>0?highScoring.join(', '):'None at this threshold'}.\n\nWrite a 3-paragraph personalized terrain analysis. Paragraph 1: What this specific symptom pattern reveals about their terrain — the interplay between their top-scoring conditions. Be concrete to their pattern, not generic. Paragraph 2: The likely sequence — which root cause probably came first and how it created the downstream cascade. Use terrain language: drainage, toxic load, gut integrity, HPA axis, biotoxin burden, methylation, etc. Paragraph 3: Why conventional medicine has likely missed this, what a terrain-first approach would look for, closing with a warm invitation to clinical evaluation.`;
+  try{
+    const response=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:systemPrompt,messages:[{role:'user',content:userPrompt}]})});
+    clearInterval(msgInterval);
+    if(!response.ok)throw new Error('API error');
+    const data=await response.json();
+    const rawText=data.content.map(b=>b.text||'').join('').trim();
+    const paragraphs=rawText.split(/\n\n+/).filter(p=>p.trim().length>0);
+    textEl.innerHTML=paragraphs.map(p=>`<p>${p.trim()}</p>`).join('');
+  }catch(err){
+    clearInterval(msgInterval);
+    const top3Names=top5.slice(0,3).map(c=>c.name).join(', ');
+    textEl.innerHTML=`<p>${fullName}, your symptom assessment reveals significant overlap across multiple terrain systems, with your strongest signals in ${top3Names}. In 20 years of clinical practice, I have seen this constellation consistently: these conditions rarely arise in isolation. They are downstream markers of a terrain under sustained load.</p><p>The sequence that typically drives this pattern begins upstream, where a drainage or detoxification burden overwhelms clearance pathways, which then compromises gut integrity, which in turn destabilizes the hormonal and immune responses your other high-scoring areas reflect. Conventional testing frequently misses this because it evaluates each system independently rather than reading the cascade as a whole.</p><p>A terrain-first approach works from the outside in, establishing drainage capacity before addressing individual conditions, and when the sequence is addressed correctly, patients are often surprised by how much can shift that they had stopped believing was changeable. If these results resonate with your experience, the most important next step is a clinical evaluation to map your specific terrain and build a protocol designed around your pattern.</p>`;
+  }
+}
+
+function retakeQuiz(){
+  document.getElementById('results-section').style.display='none';
+  document.getElementById('quiz-section').style.display='block';
+  document.querySelectorAll('input[type=checkbox]').forEach(cb=>{cb.checked=false;cb.closest('.symptom-label').classList.remove('checked');});
+  currentTab=0;
+  document.querySelectorAll('.tab-panel').forEach((p,i)=>p.classList.toggle('active',i===0));
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>{b.classList.toggle('active',i===0);b.classList.remove('done');});
   updateNav();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// INIT
 buildUI();
 updateNav();
+// Apply sex filter on initial load and whenever sex changes
+applySexFilter(document.getElementById('sex').value);
+document.getElementById('sex').addEventListener('change',function(){applySexFilter(this.value);});
 </script>
+
 </body>
 </html>
